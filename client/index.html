@@ -90,7 +90,7 @@
 <div class="span5 offset1">
 <h4> Case Study - Antrag auf Studienbeihilfe</h4>
 <fieldset>
-<legend>Allgemeine Informationen &uuml;ber den/die Antragsteller/in</legend>
+<h3>Allgemeine Informationen &uuml;ber den/die Antragsteller/in</h3>
 
 
 <label for="inputSurname">Nachname</label>
@@ -149,7 +149,7 @@
             </span>
 			
 			
-				<label>Geschlecht</label>
+<label>Geschlecht</label>
 			
 <label class="radio">
     <input id="inputGender" type="radio" name="optionsRadios" value="option1"
@@ -163,7 +163,7 @@
     Mann
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputGender')">
                     <i class="icon-time"></i>
                 </a>
@@ -264,8 +264,7 @@
                 </a>
             </span>
 	
-	<label for="inputAdressNr">Hausnummer</label>
-
+<label for="inputAdressNr">Hausnummer</label>
 <input id="inputAdressNr" type="text"
        data-bind="value: inputAdressNr, valueUpdate: 'afterkeydown', disable: inputAdressNrDisabled,
                   hasFocus: inputAdressNrSelected, visible: !isMultiMergeVisible()">
@@ -284,7 +283,6 @@
 	
 	
 <label for="inputPLZ">Postleitzahl</label>
-
 <input id="inputPLZ" type="text"
        data-bind="value: inputPLZ, valueUpdate: 'afterkeydown', disable: inputPLZDisabled,
                   hasFocus: inputPLZSelected, visible: !isMultiMergeVisible()">
@@ -302,7 +300,6 @@
             </span>
 
 <label for="inputPlace">Ort</label>
-
 <input id="inputPlace" type="text"
        data-bind="value: inputPlace, valueUpdate: 'afterkeydown', disable: inputPlaceDisabled,
                   hasFocus: inputPlaceSelected, visible: !isMultiMergeVisible()">
@@ -320,7 +317,7 @@
             </span>
 	
 
-<legend>Angaben zum Konto</legend>
+<h3>Angaben zum Konto</h3>
 <label for="inputIBAN">Ort</label>
 
 <input id="inputIBAN" type="text"  placeholder="AT"
@@ -340,7 +337,6 @@
             </span>
 	
 <label for="inputBIC">Ort</label>
-
 <input id="inputBIC" type="text"
        data-bind="value: inputBIC, valueUpdate: 'afterkeydown', disable: inputBICDisabled,
                   hasFocus: inputBICSelected, visible: !isMultiMergeVisible()">
@@ -359,8 +355,7 @@
 		
 
 		
-		<label> Ich bin Kontoinhaber</label>
-			
+<label> Ich bin Kontoinhaber</label>	
 <label class="radio">
     <input id="inputKonto" type="radio" name="optionsKonto" value="option1"
            data-bind="checked: inputKonto" onclick="showKontoInhaber()">
@@ -373,15 +368,14 @@
     Nein
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputKonto')">
                     <i class="icon-time"></i>
                 </a>
             </span>	
 		
-	<fieldset id="showKontoOwner" style="display:none">	
-	<label for="inputOwner">Kontoinhaber</label>
-
+<fieldset id="showKontoOwner" style="display:none">	
+<label for="inputOwner">Kontoinhaber</label>
 <input id="inputOwner" type="text"
        data-bind="value: inputOwner, valueUpdate: 'afterkeydown', disable: inputOwnerDisabled,
                   hasFocus: inputOwnerSelected, visible: !isMultiMergeVisible()">
@@ -400,7 +394,7 @@
 		
 </fieldset>	
 	
-	<script>
+<script>
 
 function showKontoInhaber(){
 document.getElementById("showKontoOwner").style.display="inline";
@@ -435,9 +429,7 @@ document.getElementById("child2").style.display="inline";
 
 </script>
 		
-<label> Ich habe mich mindestens vier Jahre selbst erhalten (Einkommen mindestens EUR 7.272 pro Jahr) </label>
-	
-		
+<label> Ich habe mich mindestens vier Jahre selbst erhalten (Einkommen mindestens EUR 7.272 pro Jahr) </label>	
 <label class="radio">
     <input id="inputSelfKonto" type="radio" name="optionsSelfKonto" value="option1"
            data-bind="checked: inputSelfKonto">
@@ -450,14 +442,14 @@ document.getElementById("child2").style.display="inline";
     Nein
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputSelfKonto')">
                     <i class="icon-time"></i>
                 </a>
             </span>			
 		
 		
-<legend> Weitere Angaben &uuml;ber den/die Antragsteller/in</legend>		
+<h3> Weitere Angaben &uuml;ber den/die Antragsteller/in</h3>		
 
 <label for="inputAppl">Antragsart</label>
 <select id="inputAppl" data-bind="value: inputAppl">
@@ -502,7 +494,7 @@ document.getElementById("child2").style.display="inline";
     Andere
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputNationality')">
                     <i class="icon-time"></i>
                 </a>
@@ -510,7 +502,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <p id="showNationality1" style="display:none">
-
 <input id="inputNat" type="text"
        data-bind="value: inputNat , valueUpdate: 'afterkeydown', disable: inputNatDisabled,
                   hasFocus: inputNatSelected, visible: !isMultiMergeVisible()">
@@ -558,7 +549,7 @@ document.getElementById("child2").style.display="inline";
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputMilitary ')">
                     <i class="icon-time"></i>
                 </a>
-</span>
+			</span>
 </p>
 <label> Ich bin erheblich behindert (mindestens 50 %)</label>
 <label class="radio">
@@ -573,7 +564,7 @@ document.getElementById("child2").style.display="inline";
     Nein
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputDisability')">
                     <i class="icon-time"></i>
                 </a>
@@ -599,10 +590,9 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 </p>
-<legend>Angaben &uuml;ber das Studium </legend>			
+<h3>Angaben &uuml;ber das Studium </h3>			
 			
 <label for="inputInstitut">Bildungseinrichtung</label>
-
 <input id="inputInstitut" type="text"
        data-bind="value: inputInstitut, valueUpdate: 'afterkeydown', disable: inputInstitutDisabled,
                   hasFocus: inputInstitutSelected, visible: !isMultiMergeVisible()">
@@ -619,7 +609,7 @@ document.getElementById("child2").style.display="inline";
                 </a>
             </span>			
 			
-	<label for="inputInstitutPlace">Standort</label>
+<label for="inputInstitutPlace">Standort</label>
 
 <input id="inputInstitutPlace" type="text"
        data-bind="value: inputInstitutPlace, valueUpdate: 'afterkeydown', disable: inputInstitutPlaceDisabled,
@@ -637,8 +627,7 @@ document.getElementById("child2").style.display="inline";
                 </a>
             </span>		
 			
-	<label for="inputStudyIdentifier">Studienkennung</label>
-
+<label for="inputStudyIdentifier">Studienkennung</label>
 <input id="inputStudyIdentifier" type="text"
        data-bind="value: inputStudyIdentifier, valueUpdate: 'afterkeydown', disable: inputStudyIdentifierDisabled,
                   hasFocus: inputStudyIdentifierSelected, visible: !isMultiMergeVisible()">
@@ -657,7 +646,7 @@ document.getElementById("child2").style.display="inline";
 			
 			
 	
-			<label> Studienbeginn</label>
+<label> Studienbeginn</label>
 <label class="radio">
     <input id="inputStudyStart" type="radio" name="inputStudyStart1" value="option1"
            data-bind="checked: inputStudyStart">
@@ -670,13 +659,13 @@ document.getElementById("child2").style.display="inline";
     Sommersemester
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputStudyStart')">
                     <i class="icon-time"></i>
                 </a>
             </span>	
 		
-	<label for="inputStudyStartYear">Studienbeginn - Jahr</label>
+<label for="inputStudyStartYear">Studienbeginn - Jahr</label>
 
 <input id="inputStudyStartYear" type="text"
        data-bind="value: inputStudyStartYear, valueUpdate: 'afterkeydown', disable: inputStudyStartYearDisabled,
@@ -696,7 +685,7 @@ document.getElementById("child2").style.display="inline";
 			
 		
 	
-	<label for="inputStudyPermissin">Ich habe die Aufnahmevoraussetzungen fuuml;r mein Studium erworben durch:</label>
+<label for="inputStudyPermissin">Ich habe die Aufnahmevoraussetzungen fuuml;r mein Studium erworben durch:</label>
 <select id="inputStudyPermissin" data-bind="value: inputStudyPermissin">
  <option value="1">
                   Bitte w&auml;hlen
@@ -706,12 +695,12 @@ document.getElementById("child2").style.display="inline";
                 </option>
                 <option value="3">
                   Berufsreifepr&uuml;fung
-                  <option value="4">
+                <option value="4">
                     Aufnahmepr&uuml;fung
                 </option>
                 <option value="5">
                   Reifepr&uuml;fung 2. Bildungsweg
-                  <option value="6">
+                <option value="6">
                     Studienberechtigungspr&uuml;fung
                 </option>
 </select>
@@ -722,7 +711,7 @@ document.getElementById("child2").style.display="inline";
             </span>	
 
 
-<legend>Angaben &uuml;ber vorherige Studien / Unterbrechungen</legend>
+<h3>Angaben &uuml;ber vorherige Studien / Unterbrechungen</h3>
 
 
 <label > Ich habe mein Studium unterbrochen</label>
@@ -738,7 +727,7 @@ document.getElementById("child2").style.display="inline";
            data-bind="checked: inputStudyBreak">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputStudyBreak')">
                     <i class="icon-time"></i>
                 </a>
@@ -746,13 +735,12 @@ document.getElementById("child2").style.display="inline";
 
 
 
-			<label > Ich habe bereits ein Studium abgschlossen</label>
+<label > Ich habe bereits ein Studium abgschlossen</label>
 <label class="radio">
     <input id="inputStudyFinished" type="radio" name="optionStudyFinished" value="option1"
            data-bind="checked: inputStudyFinished" onclick="showFinishedStudy()">
     Ja
 </label>
-
 
 <label class="radio" >
     <input type="radio" name="optionStudyFinished" id="optionsStudyFinished1" value="option3"
@@ -767,7 +755,6 @@ document.getElementById("child2").style.display="inline";
 
 <fieldset id="finish" style="display:none">			
 <label for="inputFinishedStudy">Abgeschlossenes Studium</label>
-
 <input id="inputFinishedStudy" type="text"
        data-bind="value: inputFinishedStudy, valueUpdate: 'afterkeydown', disable: inputFinishedStudyDisabled,
                   hasFocus: inputFinishedStudySelected, visible: !isMultiMergeVisible()">
@@ -784,8 +771,7 @@ document.getElementById("child2").style.display="inline";
                 </a>
             </span>
 	
-	<label for="inputWhichUni">An welcher Universit&auml;t</label>
-
+<label for="inputWhichUni">An welcher Universit&auml;t</label>
 <input id="inputWhichUni" type="text"
        data-bind="value: inputWhichUni, valueUpdate: 'afterkeydown', disable: inputWhichUniDisabled,
                   hasFocus: inputWhichUniSelected, visible: !isMultiMergeVisible()">
@@ -803,7 +789,7 @@ document.getElementById("child2").style.display="inline";
             </span>
 	
 	
-			<label > Im Ausland</label>
+<label > Im Ausland</label>
 <label class="radio">
     <input id="inputAbroad" type="radio" name="optionAbroad" value="option1"
            data-bind="checked: inputAbroad">
@@ -816,7 +802,7 @@ document.getElementById("child2").style.display="inline";
            data-bind="checked: inputAbroad">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputAbroad')">
                     <i class="icon-time"></i>
                 </a>
@@ -844,7 +830,7 @@ document.getElementById("child2").style.display="inline";
             </span>
 	
 		
-	<label for="inputWhichStudyTyp">Welcher Studientyp</label>
+<label for="inputWhichStudyTyp">Welcher Studientyp</label>
 <select id="inputWhichStudyTyp" data-bind="value: inputWhichStudyTyp">
 			<option>Bitte w&auml;hlen </option>
 			<option value="1"> Bachelorstudium </option>
@@ -857,8 +843,7 @@ document.getElementById("child2").style.display="inline";
                     <i class="icon-time"></i>
                 </a>
             </span>			
-	<label for="inputFinishedIn">abgeschlossen am</label>
-
+<label for="inputFinishedIn">abgeschlossen am</label>
 <input id="inputFinishedIn" type="text"
        data-bind="value: inputFinishedIn, valueUpdate: 'afterkeydown', disable: inputFinishedInDisabled,
                   hasFocus: inputFinishedInSelected, visible: !isMultiMergeVisible()">
@@ -872,7 +857,7 @@ document.getElementById("child2").style.display="inline";
 
 </fieldset>
 
-<legend> Angaben zu weiteren Personen</legend>
+<h3> Angaben zu weiteren Personen</h3>
 		
 	
 <label > Ich habe eigene Kinder und bin zur Pflege und Erziehung gesetztlich verpflichtet</label>
@@ -884,11 +869,11 @@ document.getElementById("child2").style.display="inline";
 
 
 <label class="radio">
-    <input type="radio" name="radioOwnChildName" id="adioOwnChildName1" value="option3"
+    <input type="radio" name="radioOwnChildName" id="RadioOwnChildName1" value="option3"
            data-bind="checked: radioOwnChild">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioOwnChild')">
                     <i class="icon-time"></i>
                 </a>
@@ -903,11 +888,11 @@ document.getElementById("child2").style.display="inline";
 
 
 <label class="radio">
-    <input type="radio" name="radioSisterBrotherName" id="adioOwnChildName1" value="option3"
+    <input type="radio" name="radioSisterBrotherName" id="radioSisterBrother1" value="option3"
            data-bind="checked: radioSisterBrother">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioSisterBrother')">
                     <i class="icon-time"></i>
                 </a>
@@ -927,7 +912,7 @@ document.getElementById("child2").style.display="inline";
            data-bind="checked: radioSisterBrotherOver18">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioSisterBrotherOver18')">
                     <i class="icon-time"></i>
                 </a>
@@ -948,7 +933,7 @@ document.getElementById("child2").style.display="inline";
            data-bind="checked: radioStepchild">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioStepchild')">
                     <i class="icon-time"></i>
                 </a>
@@ -983,10 +968,8 @@ document.getElementById("child2").style.display="inline";
 <fieldset id="child1" style="display:none">
 
 
-<legend> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </legend>
-
+<h3> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h3>
 <label for="inputSurnameChild1">Nachname</label>
-
 <input id="inputSurnameChild1" type="text"
        data-bind="value: inputSurnameChild1, valueUpdate: 'afterkeydown', disable: inputSurnameChild1Disabled,
                   hasFocus: inputSurnameChild1Selected, visible: !isMultiMergeVisible()">
@@ -1004,7 +987,6 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 <label for="inputNameChild1">Vorname</label>
-
 <input id="inputNameChild1" type="text"
        data-bind="value: inputNameChild1, valueUpdate: 'afterkeydown', disable: inputNameChild1Disabled,
                   hasFocus: inputNameChild1Selected, visible: !isMultiMergeVisible()">
@@ -1023,7 +1005,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputSozVerNrChild1">Sozialversicherungsnummer</label>
-
 <input id="inputSozVerNrChild1" type="text"
        data-bind="value: inputSozVerNrChild1, valueUpdate: 'afterkeydown', disable: inputSozVerNrChild1Disabled,
                   hasFocus: inputSozVerNrChild1Selected, visible: !isMultiMergeVisible()">
@@ -1041,8 +1022,7 @@ document.getElementById("child2").style.display="inline";
             </span>
 			
 			
-				<label>Geschlecht</label>
-			
+<label>Geschlecht</label>		
 <label class="radio">
     <input id="inputGenderChild1" type="radio" name="inputGenderChild1Name" value="option1"
            data-bind="checked: inputGenderChild1">
@@ -1064,7 +1044,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputBirthChild1">Geburtsdatum</label>
-
 <input id="inputBirthChild1" type="text"
        data-bind="value: inputBirthChild1, valueUpdate: 'afterkeydown', disable: inputBirthChild1Disabled,
                   hasFocus: inputBirthChild1Selected, visible: !isMultiMergeVisible()">
@@ -1083,7 +1062,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="selectChildOf">Familienstand</label>
 <select id="selectChildOf" data-bind="value: selectChildOf">
-     <option>
+				<option>
                   Bitte w&auml;hlen
                 </option>
                 <option value="1">
@@ -1113,27 +1092,26 @@ document.getElementById("child2").style.display="inline";
 
 			
 			
-	<label > Person studiert?</label>
+<label > Person studiert?</label>
 <label class="radio">
-    <input id="radioStepchildStudy1" type="radio" name="radioStepchildStudy1Name" value="option1"
-           data-bind="checked: radioStepchildStudy1">
+    <input id="radioStepchildStudy2" type="radio" name="radioStepchildStudy1Name" value="option1"
+           data-bind="checked: radioStepchildStudy2">
     Ja
 </label>
 
 
 <label class="radio">
-    <input type="radio" name="radioStepchildStudy1Name" id="adioOwnChildName1" value="option3"
-           data-bind="checked: radioStepchildStudy1">
+    <input type="radio" name="radioStepchildStudy1Name" id="radioStepchildStudy3" value="option3"
+           data-bind="checked: radioStepchildStudy2">
     Nein
 </label>
 <span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioStepchildStudy1')">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioStepchildStudy2')">
                     <i class="icon-time"></i>
                 </a>
             </span>				
 			
 <label for="inputInstitutChild">Bildungseinrichtung</label>
-
 <input id="inputInstitutChild" type="text"
        data-bind="value: inputInstitutChild, valueUpdate: 'afterkeydown', disable: inputInstitutChildDisabled,
                   hasFocus: inputInstitutChildSelected, visible: !isMultiMergeVisible()">
@@ -1150,8 +1128,7 @@ document.getElementById("child2").style.display="inline";
                 </a>
             </span>			
 			
-	<label for="inputInstitutPlaceChild">Standort</label>
-
+<label for="inputInstitutPlaceChild">Standort</label>
 <input id="inputInstitutPlaceChild" type="text"
        data-bind="value: inputInstitutPlaceChild, valueUpdate: 'afterkeydown', disable: inputInstitutPlaceChildDisabled,
                   hasFocus: inputInstitutPlaceChildSelected, visible: !isMultiMergeVisible()">
@@ -1168,8 +1145,7 @@ document.getElementById("child2").style.display="inline";
                 </a>
             </span>		
 			
-	<label for="inputStudyIdentifierChild">Studienkennung</label>
-
+<label for="inputStudyIdentifierChild">Studienkennung</label>
 <input id="inputStudyIdentifierChild" type="text"
        data-bind="value: inputStudyIdentifierChild, valueUpdate: 'afterkeydown', disable: inputStudyIdentifierChildDisabled,
                   hasFocus: inputStudyIdentifierChildSelected, visible: !isMultiMergeVisible()">
@@ -1188,7 +1164,6 @@ document.getElementById("child2").style.display="inline";
 			
 
 <label for="inputMatrikelnummerChild">Matrikel oder Personalnummer</label>
-
 <input id="inputMatrikelnummerChild" type="text"
        data-bind="value: inputMatrikelnummerChild, valueUpdate: 'afterkeydown', disable: inputMatrikelnummerChildDisabled,
                   hasFocus: inputMatrikelnummerChildSelected, visible: !isMultiMergeVisible()">
@@ -1200,10 +1175,9 @@ document.getElementById("child2").style.display="inline";
 </div>
 
 
-<legend> Wohnort w&auml;hrend des Studiums</legend>
+<h3> Wohnort w&auml;hrend des Studiums</h3>
 
 <label for="inputPLZChild">Postleitzahl</label>
-
 <input id="inputPLZChild" type="text"
        data-bind="value: inputPLZChild, valueUpdate: 'afterkeydown', disable: inputPLZChildDisabled,
                   hasFocus: inputPLZChildSelected, visible: !isMultiMergeVisible()">
@@ -1222,7 +1196,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputPlaceChild">Ort</label>
-
 <input id="inputPlaceChild" type="text"
        data-bind="value: inputPlaceChild, valueUpdate: 'afterkeydown', disable: inputPlaceChildDisabled,
                   hasFocus: inputPlaceChildSelected, visible: !isMultiMergeVisible()">
@@ -1240,10 +1213,9 @@ document.getElementById("child2").style.display="inline";
             </span>
 			
 
-<legend> Wohnort der Eltern</legend>
+<h3> Wohnort der Eltern</h3>
 
 <label for="inputPlLZParents">Postleitzahl</label>
-
 <input id="inputPlLZParents" type="text"
        data-bind="value: inputPlLZParents, valueUpdate: 'afterkeydown', disable: inputPlLZParentsDisabled,
                   hasFocus: inputPlLZParentsSelected, visible: !isMultiMergeVisible()">
@@ -1262,7 +1234,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputPlaceParents">Ort</label>
-
 <input id="inputPlaceParents" type="text"
        data-bind="value: inputPlaceParents, valueUpdate: 'afterkeydown', disable: inputPlaceParentsDisabled,
                   hasFocus: inputPlaceParentsSelected, visible: !isMultiMergeVisible()">
@@ -1283,9 +1254,9 @@ document.getElementById("child2").style.display="inline";
 			
 			
 <fieldset  id="child2" style="display:none">
-<legend> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </legend>
- <label for="inputSurnameChild2">Nachname</label>
+<h3> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h3>
 
+<label for="inputSurnameChild2">Nachname</label>
 <input id="inputSurnameChild2" type="text"
        data-bind="value: inputSurnameChild2, valueUpdate: 'afterkeydown', disable: inputSurnameChild2Disabled,
                   hasFocus: inputSurnameChild2Selected, visible: !isMultiMergeVisible()">
@@ -1303,7 +1274,6 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 <label for="inputNameChild2">Vorname</label>
-
 <input id="inputNameChild2" type="text"
        data-bind="value: inputNameChild2, valueUpdate: 'afterkeydown', disable: inputNameChild2Disabled,
                   hasFocus: inputNameChild2Selected, visible: !isMultiMergeVisible()">
@@ -1322,7 +1292,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputSozVerNrChild2">Sozialversicherungsnummer</label>
-
 <input id="inputSozVerNrChild2" type="text"
        data-bind="value: inputSozVerNrChild2, valueUpdate: 'afterkeydown', disable: inputSozVerNrChild2Disabled,
                   hasFocus: inputSozVerNrChild2Selected, visible: !isMultiMergeVisible()">
@@ -1340,8 +1309,7 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 
-				<label>Geschlecht</label>
-
+<label>Geschlecht</label>
 <label class="radio">
     <input id="inputGenderChild2" type="radio" name="inputGenderChild2Name" value="option1"
            data-bind="checked: inputGenderChild2">
@@ -1354,7 +1322,7 @@ document.getElementById("child2").style.display="inline";
     Mann
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputGenderChild2Checked')">
                     <i class="icon-time"></i>
                 </a>
@@ -1363,7 +1331,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputBirthChild2">Geburtsdatum</label>
-
 <input id="inputBirthChild2" type="text"
        data-bind="value: inputBirthChild2, valueUpdate: 'afterkeydown', disable: inputBirthChild2Disabled,
                   hasFocus: inputBirthChild2Selected, visible: !isMultiMergeVisible()">
@@ -1384,7 +1351,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="selectChildOf1">Familienstand</label>
 <select id="selectChildOf1" data-bind="value: selectChildOf1">
-     <option>
+				<option>
                   Bitte w&auml;hlen
                 </option>
                 <option value="1">
@@ -1415,7 +1382,7 @@ document.getElementById("child2").style.display="inline";
 
 
 
-	<label > Person studiert?</label>
+<label > Person studiert?</label>
 <label class="radio">
     <input id="radioStepchildStudy" type="radio" name="radioStepchildStudyName" value="option1"
            data-bind="checked: radioStepchildStudy">
@@ -1428,14 +1395,13 @@ document.getElementById("child2").style.display="inline";
            data-bind="checked: radioStepchildStudy">
     Nein
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'radioStepchildStudy')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-      <label for="inputInstitutChild1">Bildungseinrichtung</label>
-
+<label for="inputInstitutChild1">Bildungseinrichtung</label>
 <input id="inputInstitutChild1" type="text"
        data-bind="value: inputInstitutChild1, valueUpdate: 'afterkeydown', disable: inputInstitutChild1Disabled,
                   hasFocus: inputInstitutChild1Selected, visible: !isMultiMergeVisible()">
@@ -1454,8 +1420,7 @@ document.getElementById("child2").style.display="inline";
 
 
 
-	<label for="inputInstitutPlaceChild1">Standort</label>
-
+<label for="inputInstitutPlaceChild1">Standort</label>
 <input id="inputInstitutPlaceChild1" type="text"
        data-bind="value: inputInstitutPlaceChild1, valueUpdate: 'afterkeydown', disable: inputInstitutPlaceChild1Disabled,
                   hasFocus: inputInstitutPlaceChild1Selected, visible: !isMultiMergeVisible()">
@@ -1472,8 +1437,7 @@ document.getElementById("child2").style.display="inline";
                 </a>
             </span>
 
-	<label for="inputStudyIdentifierChild1">Studienkennung</label>
-
+<label for="inputStudyIdentifierChild1">Studienkennung</label>
 <input id="inputStudyIdentifierChild1" type="text"
        data-bind="value: inputStudyIdentifierChild1, valueUpdate: 'afterkeydown', disable: inputStudyIdentifierChild1Disabled,
                   hasFocus: inputStudyIdentifierChild1Selected, visible: !isMultiMergeVisible()">
@@ -1491,7 +1455,6 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 <label for="inputMatrikelnummerChild1">Matrikel oder Personalnummer</label>
-
 <input id="inputMatrikelnummerChild1" type="text"
        data-bind="value: inputMatrikelnummerChild1, valueUpdate: 'afterkeydown', disable: inputMatrikelnummerChild1Disabled,
                   hasFocus: inputMatrikelnummerChild1Selected, visible: !isMultiMergeVisible()">
@@ -1507,10 +1470,9 @@ document.getElementById("child2").style.display="inline";
                     <i class="icon-time"></i>
                 </a>
             </span>
- <legend> Wohnort w&auml;hrend des Studiums</legend>
+ <h3> Wohnort w&auml;hrend des Studiums</h3>
 
- <label for="inputPLZChild1">Postleitzahl</label>
-
+<label for="inputPLZChild1">Postleitzahl</label>
 <input id="inputPLZChild1" type="text"
        data-bind="value: inputPLZChild1, valueUpdate: 'afterkeydown', disable: inputPLZChild1Disabled,
                   hasFocus: inputPLZChild1Selected, visible: !isMultiMergeVisible()">
@@ -1529,7 +1491,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputPlaceChild1">Ort</label>
-
 <input id="inputPlaceChild1" type="text"
        data-bind="value: inputPlaceChild1, valueUpdate: 'afterkeydown', disable: inputPlaceChild1Disabled,
                   hasFocus: inputPlaceChild1Selected, visible: !isMultiMergeVisible()">
@@ -1549,10 +1510,9 @@ document.getElementById("child2").style.display="inline";
 
 
 
-            <legend> Wohnort der Eltern</legend>
+<h3> Wohnort der Eltern</h3>
 
- <label for="inputPLZParents1">Postleitzahl</label>
-
+<label for="inputPLZParents1">Postleitzahl</label>
 <input id="inputPLZParents1" type="text"
        data-bind="value: inputPLZParents1, valueUpdate: 'afterkeydown', disable: inputPLZParents1Disabled,
                   hasFocus: inputPLZParents1Selected, visible: !isMultiMergeVisible()">
@@ -1571,7 +1531,6 @@ document.getElementById("child2").style.display="inline";
 
 
 <label for="inputPlaceParents1">Ort</label>
-
 <input id="inputPlaceParents1" type="text"
        data-bind="value: inputPlaceParents1, valueUpdate: 'afterkeydown', disable: inputPlaceParents1Disabled,
                   hasFocus: inputPlaceParents1Selected, visible: !isMultiMergeVisible()">
@@ -1589,11 +1548,11 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 
-  </fieldset>
+ </fieldset>
 			
 	
 
-<legend> Angaben zu Eltern der/des Antragstellerin/s </legend>
+<h3> Angaben zu Eltern der/des Antragstellerin/s </h3>
 
 <script>
 
@@ -1629,7 +1588,7 @@ document.getElementById("mom").style.display="inline";
     <input id="inputMumDead" type="checkbox" value="checkOne" data-bind="checked: inputMumDead" onchange="parents()">
     Mutter verstorben?
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputMumDead')">
                     <i class="icon-time"></i>
                 </a>
@@ -1639,7 +1598,7 @@ document.getElementById("mom").style.display="inline";
     <input id="inputDadDead" type="checkbox" value="checkOne" data-bind="checked: inputDadDead" onchange="parents()">
     Vater verstorben?
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputDadDead')">
                     <i class="icon-time"></i>
                 </a>
@@ -1650,7 +1609,7 @@ document.getElementById("mom").style.display="inline";
     <input id="inputAlone" type="checkbox" value="checkOne" data-bind="checked: inputAlone" onchange="parentsBoth()">
     Meine Eltern leben derzeit nicht in Wohngemeinschaft
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputAlone')">
                     <i class="icon-time"></i>
                 </a>
@@ -1659,11 +1618,10 @@ document.getElementById("mom").style.display="inline";
 
 
 <fieldset id="mom">
-<legend>Angaben &uuml;ber die Mutter</legend>
+<h3>Angaben &uuml;ber die Mutter</h3>
 
 
 <label for="inputSurnameMom">Nachname</label>
-
 <input id="inputSurnameMom" type="text"
        data-bind="value: inputSurnameMom, valueUpdate: 'afterkeydown', disable: inputSurnameMomDisabled,
                   hasFocus: inputSurnameMomSelected, visible: !isMultiMergeVisible()">
@@ -1681,7 +1639,6 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 <label for="inputNameMom">Vorname</label>
-
 <input id="inputNameMom" type="text"
        data-bind="value: inputNameMom, valueUpdate: 'afterkeydown', disable: inputNameMomDisabled,
                   hasFocus: inputNameMomSelected, visible: !isMultiMergeVisible()">
@@ -1700,7 +1657,6 @@ document.getElementById("mom").style.display="inline";
 
 
 <label for="inputSozVerNrMom">Sozialversicherungsnummer</label>
-
 <input id="inputSozVerNrMom" type="text"
        data-bind="value: inputSozVerNrMom, valueUpdate: 'afterkeydown', disable: inputSozVerNrMomDisabled,
                   hasFocus: inputSozVerNrMomSelected, visible: !isMultiMergeVisible()">
@@ -1723,7 +1679,6 @@ document.getElementById("mom").style.display="inline";
 
 
 <label for="inputBirthMom">Geburtsdatum</label>
-
 <input id="inputBirthMom" type="text"
        data-bind="value: inputBirthMom, valueUpdate: 'afterkeydown', disable: inputBirthMomDisabled,
                   hasFocus: inputBirthMomSelected, visible: !isMultiMergeVisible()">
@@ -1742,7 +1697,6 @@ document.getElementById("mom").style.display="inline";
 
 
 <label for="inputAdressMom">Adresse</label>
-
 <input id="inputAdressMom" type="text"
        data-bind="value: inputAdressMom, valueUpdate: 'afterkeydown', disable: inputAdressMomDisabled,
                   hasFocus: inputAdressMomSelected, visible: !isMultiMergeVisible()">
@@ -1759,8 +1713,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-	<label for="inputAdressMomNr">Hausnummer</label>
-
+<label for="inputAdressMomNr">Hausnummer</label>
 <input id="inputAdressMomNr" type="text"
        data-bind="value: inputAdressMomNr, valueUpdate: 'afterkeydown', disable: inputAdressMomNrDisabled,
                   hasFocus: inputAdressMomNrSelected, visible: !isMultiMergeVisible()">
@@ -1779,7 +1732,6 @@ document.getElementById("mom").style.display="inline";
 
 
 <label for="inputPLZMom">Postleitzahl</label>
-
 <input id="inputPLZMom" type="text"
        data-bind="value: inputPLZMom, valueUpdate: 'afterkeydown', disable: inputPLZMomDisabled,
                   hasFocus: inputPLZMomSelected, visible: !isMultiMergeVisible()">
@@ -1797,7 +1749,6 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 <label for="inputPlaceMom">Ort</label>
-
 <input id="inputPlaceMom" type="text"
        data-bind="value: inputPlaceMom, valueUpdate: 'afterkeydown', disable: inputPlaceMomDisabled,
                   hasFocus: inputPlaceMomSelected, visible: !isMultiMergeVisible()">
@@ -1815,8 +1766,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-<legend>Beruf im Kalenderjahr 2014</legend>
-
+<h3>Beruf im Kalenderjahr 2014</h3>
 <label for="inputBerufMom">Beruf</label>
 <select id="inputBerufMom" multiple="multiple" data-bind="selectedOptions: inputBerufMom">
   
@@ -1852,8 +1802,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 <label for="inputJobMom">Derzeitiger Beruf</label>
-
- <input id="inputJobMom" type="text"
+<input id="inputJobMom" type="text"
        data-bind="value: inputJobMom, valueUpdate: 'afterkeydown', disable: inputJobMomDisabled,
                    hasFocus: inputJobMomSelected, visible: !isMultiMergeVisible()">
 
@@ -1869,9 +1818,9 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
-</span>
+			</span>
 
-   <legend> Eink&uuml;nfte im Kalenderjahr 2014 </legend>
+<h3> Eink&uuml;nfte im Kalenderjahr 2014 </h3>
 
  <label class="checkbox">
     <input id="inputJobMomEarn" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn">
@@ -1884,8 +1833,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-  <label for="inputMomEarn1">Jahresbetrag brutto EUR</label>
-
+<label for="inputMomEarn1">Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn1" type="text"
        data-bind="value: inputMomEarn1, valueUpdate: 'afterkeydown', disable: inputMomEarn1Disabled,
                    hasFocus: inputMomEarn1Selected, visible: !isMultiMergeVisible()">
@@ -1909,14 +1857,13 @@ document.getElementById("mom").style.display="inline";
     <input id="inputJobMomEarn1" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn1">
     &Uuml;bergangsgeld (von Pensionsversicherungsanstalt ausbezahlt)
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn1')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn2"> Jahresbetrag brutto EUR</label>
-
+<label for="inputMomEarn2"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn2" type="text"
        data-bind="value: inputMomEarn2, valueUpdate: 'afterkeydown', disable: inputMomEarn2Disabled,
                    hasFocus: inputMomEarn2Selected, visible: !isMultiMergeVisible()">
@@ -1948,7 +1895,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-  <label for="inputMomEarn3"> Jahresbetrag brutto EUR</label>
+<label for="inputMomEarn3"> Jahresbetrag brutto EUR</label>
 
 <input id="inputMomEarn3" type="text"
        data-bind="value: inputMomEarn3, valueUpdate: 'afterkeydown', disable: inputMomEarn3Disabled,
@@ -1969,17 +1916,17 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-  <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobMomEarn31" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn31">
     Kinderbetreuungsgeld
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn31')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn4">& Jahresbetrag brutto EUR</label>
+ <label for="inputMomEarn4">& Jahresbetrag brutto EUR</label>
 
 <input id="inputMomEarn4" type="text"
        data-bind="value: inputMomEarn4, valueUpdate: 'afterkeydown', disable: inputMomEarn4Disabled,
@@ -2005,14 +1952,13 @@ document.getElementById("mom").style.display="inline";
     <input id="inputJobMomEarn3" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn3">
     Sozialhilfe/Mindestsicherung
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn3')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn5"> Jahresbetrag brutto EUR</label>
-
+<label for="inputMomEarn5"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn5" type="text"
        data-bind="value: inputMomEarn5, valueUpdate: 'afterkeydown', disable: inputMomEarn5Disabled,
                    hasFocus: inputMomEarn5Selected, visible: !isMultiMergeVisible()">
@@ -2032,17 +1978,17 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-    <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobMomEarn4" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn4">
     Sonderunterst&uuml;tzung des &ouml;sterreichischen Bergbaues
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn4')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn5"> Jahresbetrag brutto EUR</label>
+<label for="inputMomEarn5"> Jahresbetrag brutto EUR</label>
 
 <input id="inputMomEarn5_1" type="text"
        data-bind="value: inputMomEarn5_1, valueUpdate: 'afterkeydown', disable: inputMomEarn5_1Disabled,
@@ -2063,18 +2009,17 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-  <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobMomEarn5" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn5">
     Freier Dienstvertrag, Werkvertrag
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn5')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn6"> Jahresbetrag brutto EUR</label>
-
+<label for="inputMomEarn6"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn6" type="text"
        data-bind="value: inputMomEarn6, valueUpdate: 'afterkeydown', disable: inputMomEarn6Disabled,
                    hasFocus: inputMomEarn6Selected, visible: !isMultiMergeVisible()">
@@ -2093,18 +2038,17 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
- <label class="checkbox">
-    <input id="inputJobMomEarn6" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn6">
+<label class="checkbox">
+<input id="inputJobMomEarn6" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn6">
     Dienstleistungsscheck
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn6')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn7"> Jahresbetrag brutto EUR</label>
-
+<label for="inputMomEarn7"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn7" type="text"
        data-bind="value: inputMomEarn7, valueUpdate: 'afterkeydown', disable: inputMomEarn7Disabled,
                    hasFocus: inputMomEarn7Selected, visible: !isMultiMergeVisible()">
@@ -2124,18 +2068,17 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-      <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobMomEarn7" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn7">
     Ausl&auml;ndisches Einkommen
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn7')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputMomEarn8"> Jahresbetrag brutto EUR</label>
-
+<label for="inputMomEarn8"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn8" type="text"
        data-bind="value: inputMomEarn8, valueUpdate: 'afterkeydown', disable: inputMomEarn8Disabled,
                    hasFocus: inputMomEarn8Selected, visible: !isMultiMergeVisible()">
@@ -2160,7 +2103,7 @@ document.getElementById("mom").style.display="inline";
     <input id="inputMomBorder" type="checkbox" value="checkOne" data-bind="checked: inputMomBorder">
    Ich bin Grenzg&auml;ngerin/Grenzg&auml;nger im Sinne des Einkommensteuergesetzes.
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputMomBorder')">
                     <i class="icon-time"></i>
                 </a>
@@ -2185,13 +2128,11 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
-
-
-</Fieldset>
+</fieldset>
 
 
 <fieldset id="dad">
-<legend> Angaben &uuml;ber den Vater</legend>
+<h3> Angaben &uuml;ber den Vater</h3>
 <label for="inputSurnameDad">Nachname</label>
 
 <input id="inputSurnameDad" type="text"
@@ -2247,8 +2188,6 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-
-
 <label for="inputBirthDad">Geburtsdatum</label>
 
 <input id="inputBirthDad" type="text"
@@ -2269,7 +2208,6 @@ document.getElementById("mom").style.display="inline";
 
 
 <label for="inputAdressDad">Adresse</label>
-
 <input id="inputAdressDad" type="text"
        data-bind="value: inputAdressDad, valueUpdate: 'afterkeydown', disable: inputAdressDadDisabled,
                   hasFocus: inputAdressDadSelected, visible: !isMultiMergeVisible()">
@@ -2286,8 +2224,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-	<label for="inputAdressDadNr">Hausnummer</label>
-
+<label for="inputAdressDadNr">Hausnummer</label>
 <input id="inputAdressDadNr" type="text"
        data-bind="value: inputAdressDadNr, valueUpdate: 'afterkeydown', disable: inputAdressDadNrDisabled,
                   hasFocus: inputAdressDadNrSelected, visible: !isMultiMergeVisible()">
@@ -2306,7 +2243,6 @@ document.getElementById("mom").style.display="inline";
 
 
 <label for="inputPLZDad">Postleitzahl</label>
-
 <input id="inputPLZDad" type="text"
        data-bind="value: inputPLZDad, valueUpdate: 'afterkeydown', disable: inputPLZDadDisabled,
                   hasFocus: inputPLZDadSelected, visible: !isMultiMergeVisible()">
@@ -2324,7 +2260,6 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 <label for="inputPlaceDad">Ort</label>
-
 <input id="inputPlaceDad" type="text"
        data-bind="value: inputPlaceDad, valueUpdate: 'afterkeydown', disable: inputPlaceDadDisabled,
                   hasFocus: inputPlaceDadSelected, visible: !isMultiMergeVisible()">
@@ -2342,11 +2277,10 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-<legend>Beruf</legend>
-
+<h3>Beruf</h3>
 <label for="inputBerufDad">Input eleven</label>
 <select id="inputBerufDad" multiple="multiple" data-bind="selectedOptions: inputBerufDad">
-    <option>
+				<option>
                   Bitte w&auml;hlen
                 </option>
                 <option value="1">
@@ -2381,8 +2315,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 <label for="inputJobDad">Derzeitiger Beruf</label>
-
- <input id="inputJobDad" type="text"
+<input id="inputJobDad" type="text"
        data-bind="value: inputJobDad, valueUpdate: 'afterkeydown', disable: inputJobDadDisabled,
                    hasFocus: inputJobDadSelected, visible: !isMultiMergeVisible()">
 
@@ -2398,10 +2331,9 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
-</span>
+			</span>
 
-   <legend> Eink&uuml;nfte im Kalenderjahr 2014 </legend>
-
+<h3> Eink&uuml;nfte im Kalenderjahr 2014 </h3>
  <label class="checkbox">
     <input id="inputJobDadEarn" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn">
     Unfallrente
@@ -2413,8 +2345,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-  <label for="inputDadEarn1">Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn1">Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn1" type="text"
        data-bind="value: inputDadEarn1, valueUpdate: 'afterkeydown', disable: inputDadEarn1Disabled,
                    hasFocus: inputDadEarn1Selected, visible: !isMultiMergeVisible()">
@@ -2435,18 +2366,17 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-   <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobDadEarn1" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn1">
     &Uuml;bergangsgeld (von Pensionsversicherungsanstalt ausbezahlt)
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn1')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputDadEarn2"> Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn2"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn2" type="text"
        data-bind="value: inputDadEarn2, valueUpdate: 'afterkeydown', disable: inputDadEarn2Disabled,
                    hasFocus: inputDadEarn2Selected, visible: !isMultiMergeVisible()">
@@ -2472,14 +2402,13 @@ document.getElementById("mom").style.display="inline";
     <input id="inputJobDadEarn2" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn2">
     Wochengeld
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn2')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputDadEarn3"> Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn3"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn3" type="text"
        data-bind="value: inputDadEarn3, valueUpdate: 'afterkeydown', disable: inputDadEarn3Disabled,
                    hasFocus: inputDadEarn3Selected, visible: !isMultiMergeVisible()">
@@ -2499,18 +2428,17 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-  <label class="checkbox">
-    <input id="inputJobDadEarn3" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn3">
+<label class="checkbox">
+    <input id="inputJobDadEarn3a" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn3a">
     Kinderbetreuungsgeld
 </label>
 <span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn3')">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn3a')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputDadEarn4">& Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn4">& Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn4" type="text"
        data-bind="value: inputDadEarn4, valueUpdate: 'afterkeydown', disable: inputDadEarn4Disabled,
                    hasFocus: inputDadEarn4Selected, visible: !isMultiMergeVisible()">
@@ -2541,20 +2469,19 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-  <label for="inputDadEarn5"> Jahresbetrag brutto EUR</label>
+<label for="inputDadEarn5a"> Jahresbetrag brutto EUR</label>
+<input id="inputDadEarn5a" type="text"
+       data-bind="value: inputDadEarn5a, valueUpdate: 'afterkeydown', disable: inputDadEarn5aDisabled,
+                   hasFocus: inputDadEarn5aSelected, visible: !isMultiMergeVisible()">
 
-<input id="inputDadEarn5" type="text"
-       data-bind="value: inputDadEarn5, valueUpdate: 'afterkeydown', disable: inputDadEarn5Disabled,
-                   hasFocus: inputDadEarn5Selected, visible: !isMultiMergeVisible()">
-
-<div id="inputDadEarn5Editable" class="editable"
+<div id="inputDadEarn5aEditable" class="editable"
      data-bind="visible: isMultiMergeVisible, attr: {contentEditable: isMultiMergeVisible},
-                 contentEditable: {text: inputDadEarn5, html: inputDadEarn5Editable}">
+                 contentEditable: {text: inputDadEarn5a, html: inputDadEarn5aEditable}">
 
 </div>
 
             <span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputDadEarn5')">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputDadEarn5a')">
                     <i class="icon-time"></i>
                 </a>
             </span>
@@ -2562,7 +2489,7 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-    <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobDadEarn4" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn4">
     Sonderunterst&uuml;tzung des &ouml;sterreichischen Bergbaues
 </label>
@@ -2572,8 +2499,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-  <label for="inputDadEarn5"> Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn5"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn5" type="text"
        data-bind="value: inputDadEarn5, valueUpdate: 'afterkeydown', disable: inputDadEarn5Disabled,
                    hasFocus: inputDadEarn5Selected, visible: !isMultiMergeVisible()">
@@ -2593,18 +2519,17 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-  <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobDadEarn5" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn5">
     Freier Dienstvertrag, Werkvertrag
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn5')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputDadEarn6"> Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn6"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn6" type="text"
        data-bind="value: inputDadEarn6, valueUpdate: 'afterkeydown', disable: inputDadEarn6Disabled,
                    hasFocus: inputDadEarn6Selected, visible: !isMultiMergeVisible()">
@@ -2623,7 +2548,7 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
- <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobDadEarn6" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn6">
     Dienstleistungsscheck
 </label>
@@ -2633,8 +2558,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-  <label for="inputDadEarn7"> Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn7"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn7" type="text"
        data-bind="value: inputDadEarn7, valueUpdate: 'afterkeydown', disable: inputDadEarn7Disabled,
                    hasFocus: inputDadEarn7Selected, visible: !isMultiMergeVisible()">
@@ -2654,7 +2578,7 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-      <label class="checkbox">
+<label class="checkbox">
     <input id="inputJobDadEarn7" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn7">
     Ausl&auml;ndisches Einkommen
 </label>
@@ -2664,8 +2588,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-  <label for="inputDadEarn8"> Jahresbetrag brutto EUR</label>
-
+<label for="inputDadEarn8"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn8" type="text"
        data-bind="value: inputDadEarn8, valueUpdate: 'afterkeydown', disable: inputDadEarn8Disabled,
                    hasFocus: inputDadEarn8Selected, visible: !isMultiMergeVisible()">
@@ -2716,14 +2639,9 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
+</fieldset>
 
-</Fieldset>
-
-
-
-
-
-<legend>Einkommen der/des Antragstellerin/s</legend>
+<h3>Einkommen der/des Antragstellerin/s</h3>
 	<label>Ich werde die Einkommensgrenze von EUR 10.000,- (inkl. Waisenpension, etc) &uuml;berschreiten.</label>
 
 <label class="radio">
@@ -2738,7 +2656,7 @@ document.getElementById("mom").style.display="inline";
     Nein
 </label>
 
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
                 <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputSelfEarn')">
                     <i class="icon-time"></i>
                 </a>
@@ -2783,7 +2701,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-  <label>folgende Leistungen beziehen:</label>
+<label>folgende Leistungen beziehen:</label>
 <label for="inputGetAid">eine ausl&auml;ndische staatliche Studienf&ouml;rderung (z.B. BAf&ouml;G) in der H&ouml;he von insgesamt(in EUR)</label>
 
 <input id="inputGetAid" type="text"
@@ -2822,8 +2740,8 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-<legend>Einkommenserkl&auml;rung</legend>
- <label for="inputPeriodSepDez">September 2015 bis 31. Dezember 2015</label>
+<h3>Einkommenserkl&auml;rung</h3>
+<label for="inputPeriodSepDez">September 2015 bis 31. Dezember 2015</label>
 
 <input id="inputPeriodSepDez" type="text"
        data-bind="value: inputPeriodSepDez, valueUpdate: 'afterkeydown', disable: inputPeriodSepDezDisabled,
@@ -2843,26 +2761,24 @@ document.getElementById("mom").style.display="inline";
 
 
 
-<label for="inputPeriodJanFeb">J&auml;nner 2016 bis 29. Februar 2016</label>
+<label for="inputPeriodJanFebru">J&auml;nner 2016 bis 29. Februar 2016</label>
+<input id="inputPeriodJanFebru" type="text"
+       data-bind="value: inputPeriodJanFebru, valueUpdate: 'afterkeydown', disable: inputPeriodJanFebruDisabled,
+                  hasFocus: inputPeriodJanFebruSelected, visible: !isMultiMergeVisible()">
 
-<input id="inputPeriodJanFeb" type="text"
-       data-bind="value: inputPeriodJanFeb, valueUpdate: 'afterkeydown', disable: inputPeriodJanFebDisabled,
-                  hasFocus: inputPeriodJanFebSelected, visible: !isMultiMergeVisible()">
-
-<div id="inputPeriodJanFebEditable" class="editable"
+<div id="inputPeriodJanFebruEditable" class="editable"
      data-bind="visible: isMultiMergeVisible, attr: {contentEditable: isMultiMergeVisible},
-                 contentEditable: {text: inputPeriodJanFeb, html: inputPeriodJanFebEditable}">
+                 contentEditable: {text: inputPeriodJanFebru, html: inputPeriodJanFebruEditable}">
 
 </div>
 
             <span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputPeriodJanFeb')">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputPeriodJanFebru')">
                     <i class="icon-time"></i>
                 </a>
             </span>
 
-  <label for="inputPeriodMarAug">M&auml;rz 2016 bis 31. August 2016</label>
-
+<label for="inputPeriodMarAug">M&auml;rz 2016 bis 31. August 2016</label>
 <input id="inputPeriodMarAug" type="text"
        data-bind="value: inputPeriodMarAug, valueUpdate: 'afterkeydown', disable: inputPeriodMarAugDisabled,
                   hasFocus: inputPeriodMarAugSelected, visible: !isMultiMergeVisible()">
@@ -2880,9 +2796,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-
 <label for="inputPeriodSepDez1">September 2016 bis 31. Dezember 2016</label>
-
 <input id="inputPeriodSepDez1" type="text"
        data-bind="value: inputPeriodSepDez1, valueUpdate: 'afterkeydown', disable: inputPeriodSepDez1Disabled,
                   hasFocus: inputPeriodSepDez1Selected, visible: !isMultiMergeVisible()">
@@ -2900,8 +2814,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-   <label for="inputPeriodJanFeb">J&auml;nner 2017 bis 28. Februar 2017</label>
-
+<label for="inputPeriodJanFeb">J&auml;nner 2017 bis 28. Februar 2017</label>
 <input id="inputPeriodJanFeb" type="text"
        data-bind="value: inputPeriodJanFeb, valueUpdate: 'afterkeydown', disable: inputPeriodJanFebDisabled,
                   hasFocus: inputPeriodJanFebSelected, visible: !isMultiMergeVisible()">
@@ -2919,40 +2832,37 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-	<legend>Erkl&auml;ung zu Einkommensdaten und Informationen	</legend>
+<h3>Erkl&auml;ung zu Einkommensdaten und Informationen	</h3>
 
-	<fieldset>
+<fieldset>
 <p>
-              <label style="float:left; text-align:left; width:450px">
+	<label style="float:left; text-align:left; width:450px">
                 Ich nehme zur Kenntnis, dass
-              </label>
-            </p>
-            <p>
-              <label style="float:left; text-align:left; width:600px">
+	</label>
+</p>
+ <p>
+    <label style="float:left; text-align:left; width:600px">
                 - die einkommens- und personenbezogenen Daten automationsunterst&uuml;tzt ermittelt werden.
-              </label>
-            </p>
-            <p>
-              <label style="float:left; text-align:left; width:700px">
+    </label>
+</p>
+<p>
+    <label style="float:left; text-align:left; width:700px">
                 - dieser Antrag f&uuml;r die wiederholte Zuerkennung von Studienbeihilfe gilt, solange keine Unterbrechung des Beihilfenbezuges eintritt (siehe www.stipendium.at).
-              </label>
-            </p>
-            <p>
-              <label style="float:left; text-align:left; width:800px">
+    </label>
+</p>
+<p>
+    <label style="float:left; text-align:left; width:800px">
                 - unvollst&auml;ndige oder unwahre Angaben die R&uuml;ckzahlung der Studienbeihilfe bewirken k&ouml;nnen.
-              </label>
-            </p>
-            <p>
-              <label style="float:left; text-align:left; width:700px">
+    </label>
+</p>
+<p>
+    <label style="float:left; text-align:left; width:700px">
                 - eine Mitteilung &uuml;ber die Gew&auml;hrung eines Studienzuschusses an das Bundesministerium f&uuml;r Wissenschaft, Forschung und Wirtschaft erfolgt.
-              </label>
-            </p>
-
-	</p>
-     </fieldset>       
+    </label>
+</p>
+</fieldset>       
             
-             <label for="inputDate">Wien, am</label>
-
+<label for="inputDate">Wien, am</label>
 <input id="inputDate" type="text"
        data-bind="value: inputDate, valueUpdate: 'afterkeydown', disable: inputDateDisabled,
                   hasFocus: inputDateSelected, visible: !isMultiMergeVisible()">
@@ -2968,9 +2878,6 @@ document.getElementById("mom").style.display="inline";
                     <i class="icon-time"></i>
                 </a>
             </span>
-
-
-            
             <p>
             </p>
 <!--
@@ -3013,9 +2920,6 @@ document.getElementById("mom").style.display="inline";
     <div class="navbar-inner">
         <div class="span5" style="margin-left: 80px; margin-top: 10px">
 
-		
-		
-		
             <div data-bind="visible: inputSurnameDynamic, click: inputSurnameScroll">
                 <label>Input one</label>
 
@@ -3047,8 +2951,8 @@ document.getElementById("mom").style.display="inline";
                 </div>
             </div>
 			
-		<div data-bind="visible: inputMatrikelnummerDynamic, click: inputMatrikelnummerScroll">
-  <label>Input one</label>
+<div data-bind="visible: inputMatrikelnummerDynamic, click: inputMatrikelnummerScroll">
+	<label>Input one</label>
     <br>
     <div class="editable"  data-bind="visible: !isMultiMergeVisible(), text: inputMatrikelnummer">
     </div>
@@ -3090,1019 +2994,906 @@ document.getElementById("mom").style.display="inline";
 </div>	
 			
 <div data-bind="visible: inputPLZDynamic, click: inputPLZScroll">
-                <label>Input one</label>
+    <label>Input one</label>
+    <div class="editable"
+        data-bind="visible: !isMultiMergeVisible(), text: inputPLZ">
+    </div>
+    <div class="editable"
+         data-bind="visible: isMultiMergeVisible, html: inputPLZEditable">
+    </div>
+</div>
 
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPLZ">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPLZEditable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputPlaceDynamic, click: inputPlaceScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlace">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceEditable">
-                </div>
-            </div>
-
- <div data-bind="visible: inputIBANDynamic, click: inputIBANScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputIBAN">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputIBANEditable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputBICDynamic, click: inputBICScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputBIC">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputBICEditable">
-                </div>
-            </div>
-
-
-
+<div data-bind="visible: inputPlaceDynamic, click: inputPlaceScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                     
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlace">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlaceEditable">
+  </div>
+</div>
+<div data-bind="visible: inputIBANDynamic, click: inputIBANScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputIBAN">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputIBANEditable">
+  </div>
+</div>
+<div data-bind="visible: inputBICDynamic, click: inputBICScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputBIC">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputBICEditable">
+  </div>
+</div>
 <div data-bind="visible: inputOwnerDynamic, click: inputOwnerScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputOwner ">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputOwnerEditable">
-                </div>
-            </div>
-
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputOwner ">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputOwnerEditable">
+  </div>
+</div>
 <div data-bind="visible: inputNatDynamic, click: inputNatScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputNat ">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputNatEditable">
-                </div>
-            </div>
-
-            <div data-bind="visible: inputMilitaryDynamic, click: inputMilitaryScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMilitary">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMilitaryEditable">
-                </div>
-            </div>
-      <div data-bind="visible: inputInstitutDynamic, click: inputInstitutScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputInstitut">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputInstitutEditable">
-                </div>
-            </div>
-
-            <div data-bind="visible: inputInstitutPlaceDynamic, click: inputInstitutPlaceScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputInstitutPlace">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputInstitutPlaceEditable">
-                </div>
-            </div>
-
-
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputNat ">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputNatEditable">
+  </div>
+</div>
+<div data-bind="visible: inputMilitaryDynamic, click: inputMilitaryScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputMilitary">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputMilitaryEditable">
+  </div>
+</div>
+<div data-bind="visible: inputInstitutDynamic, click: inputInstitutScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputInstitut">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputInstitutEditable">
+  </div>
+</div>
+<div data-bind="visible: inputInstitutPlaceDynamic, click: inputInstitutPlaceScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputInstitutPlace">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputInstitutPlaceEditable">
+  </div>
+</div>
 <div data-bind="visible: inputStudyIdentifierDynamic, click: inputStudyIdentifierScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputStudyIdentifier">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputStudyIdentifierEditable">
-                </div>
-            </div>
-
-
-	<div data-bind="visible: inputStudyStartYearDynamic, click: inputStudyStartYearScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputStudyStartYear">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputStudyStartYearEditable">
-                </div>
-            </div>
-
-
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputStudyIdentifier">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputStudyIdentifierEditable">
+  </div>
+</div>
+<div data-bind="visible: inputStudyStartYearDynamic, click: inputStudyStartYearScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputStudyStartYear">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputStudyStartYearEditable">
+  </div>
+</div>
 <div data-bind="visible: inputFinishedStudyDynamic, click: inputFinishedStudyScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputFinishedStudy">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputFinishedStudyEditable">
-                </div>
-            </div>
-    <div data-bind="visible: inputWhichUniDynamic, click: inputWhichUniScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputWhichUni">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputWhichUniEditable">
-                </div>
-            </div>
-
-
-
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputFinishedStudy">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputFinishedStudyEditable">
+  </div>
+</div>
+<div data-bind="visible: inputWhichUniDynamic, click: inputWhichUniScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputWhichUni">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputWhichUniEditable">
+  </div>
+</div>
 <div data-bind="visible: inputWhichUniAbroadDynamic, click: inputWhichUniAbroadScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputWhichUniAbroad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputWhichUniAbroadEditable">
-                </div>
-            </div>
-
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputWhichUniAbroad">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputWhichUniAbroadEditable">
+  </div>
+</div>
 <div data-bind="visible: inputSumChildrenDynamic, click: inputSumChildrenScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSumChildren">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSumChildrenEditable">
-                </div>
-            </div>
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSumChildren">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSumChildrenEditable">
+  </div>
+</div>
 <div data-bind="visible: inputSurnameChild1Dynamic, click: inputSurnameChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSurnameChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSurnameChild1Editable">
-                </div>
-            </div>
-			<div data-bind="visible: inputNameChild1Dynamic, click: inputNameChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputNameChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputNameChild1Editable">
-                </div>
-            </div>
-			<div data-bind="visible: inputSozVerNrChild1Dynamic, click: inputSozVerNrChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSozVerNrChild1Editable">
-                </div>
-            </div>
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSurnameChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSurnameChild1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputNameChild1Dynamic, click: inputNameChild1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputNameChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputNameChild1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputSozVerNrChild1Dynamic, click: inputSozVerNrChild1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSozVerNrChild1Editable">
+  </div>
+</div>
 <div data-bind="visible: inputInstitutChildDynamic, click: inputInstitutChildScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputInstitutChild">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputInstitutChildEditable">
-                </div>
-            </div>
-
-            <div data-bind="visible: inputInstitutPlaceChildDynamic, click: inputInstitutPlaceChildScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputInstitutPlaceChild">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputInstitutPlaceChildEditable">
-                </div>
-            </div>
-
-
-
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputInstitutChild">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputInstitutChildEditable">
+  </div>
+</div>
+<div data-bind="visible: inputInstitutPlaceChildDynamic, click: inputInstitutPlaceChildScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputInstitutPlaceChild">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputInstitutPlaceChildEditable">
+  </div>
+</div>
 <div data-bind="visible: inputStudyIdentifierChildDynamic, click: inputStudyIdentifierChildScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputStudyIdentifierChild">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputStudyIdentifierChildEditable">
-                </div>
-            </div>			
-			
-			
-		<div data-bind="visible: inputMatrikelnummerChildDynamic, click: inputMatrikelnummerChildScroll">
-  <label>Input one</label>
-    <br>
-    <div class="editable"  data-bind="visible: !isMultiMergeVisible(), text: inputMatrikelnummerChild">
-    </div>
-    <div class="editable" data-bind="visible: isMultiMergeVisible, html: inputMatrikelnummerChildEditable">
-    </div>
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputStudyIdentifierChild">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputStudyIdentifierChildEditable">
+  </div>
 </div>
-		
-			
-	<div data-bind="visible: inputPLZChildDynamic, click: inputPLZChildScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPLZChild">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPLZChildEditable">
-                </div>
-            </div>
-			
-			
-		 <div data-bind="visible: inputPlaceChildDynamic, click: inputPlaceChildScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlaceChild">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceChildEditable">
-                </div>
-            </div>			
-
-		
-			
-	<div data-bind="visible: inputPlLZParentsDynamic, click: inputPlLZParentsScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlLZParents">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlLZParentsEditable">
-                </div>
-            </div>
-			
-			
-		 <div data-bind="visible: inputPlaceParentsDynamic, click: inputPlaceParentsScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlaceParents">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceParentsEditable">
-                </div>
-            </div>
-
-	<div data-bind="visible: inputPLZParents1Dynamic, click: inputPLZParents1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPLZParents1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPLZParents1Editable">
-                </div>
-            </div>
-
-
-		 <div data-bind="visible: inputPlaceParents1Dynamic, click: inputPlaceParents1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlaceParents1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceParents1Editable">
-                </div>
-            </div>
-
-
-
-
-
-	<div data-bind="visible: inputPLZChild1Dynamic, click: inputPLZChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPLZChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPLZChild1Editable">
-                </div>
-            </div>
-
-
-		 <div data-bind="visible: inputPlaceChild1Dynamic, click: inputPlaceChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlaceChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceChild1Editable">
-                </div>
-            </div>
-
-      <div data-bind="visible: inputInstitutChild1Dynamic, click: inputInstitutChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputInstitutChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputInstitutChild1Editable">
-                </div>
-            </div>
-
-            <div data-bind="visible: inputInstitutPlaceChild1Dynamic, click: inputInstitutPlaceChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputInstitutPlaceChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputInstitutPlaceChild1Editable">
-                </div>
-            </div>
-
-
-
+<div data-bind="visible: inputMatrikelnummerChildDynamic, click: inputMatrikelnummerChildScroll">
+  <label>Input one
+  </label>
+  <br>
+  <div class="editable"  
+		data-bind="visible: !isMultiMergeVisible(), text: inputMatrikelnummerChild">
+  </div>
+  <div class="editable" 
+		data-bind="visible: isMultiMergeVisible, html: inputMatrikelnummerChildEditable">
+  </div>
+</div>
+<div data-bind="visible: inputPLZChildDynamic, click: inputPLZChildScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPLZChild">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPLZChildEditable">
+  </div>
+</div>
+<div data-bind="visible: inputPlaceChildDynamic, click: inputPlaceChildScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlaceChild">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlaceChildEditable">
+  </div>
+</div>
+<div data-bind="visible: inputPlLZParentsDynamic, click: inputPlLZParentsScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlLZParents">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlLZParentsEditable">
+  </div>
+</div>
+<div data-bind="visible: inputPlaceParentsDynamic, click: inputPlaceParentsScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlaceParents">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlaceParentsEditable">
+  </div>
+</div>
+<div data-bind="visible: inputPLZParents1Dynamic, click: inputPLZParents1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPLZParents1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPLZParents1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputPlaceParents1Dynamic, click: inputPlaceParents1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlaceParents1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlaceParents1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputPLZChild1Dynamic, click: inputPLZChild1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPLZChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPLZChild1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputPlaceChild1Dynamic, click: inputPlaceChild1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlaceChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlaceChild1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputInstitutChild1Dynamic, click: inputInstitutChild1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputInstitutChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputInstitutChild1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputInstitutPlaceChild1Dynamic, click: inputInstitutPlaceChild1Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputInstitutPlaceChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputInstitutPlaceChild1Editable">
+  </div>
+</div>
 <div data-bind="visible: inputStudyIdentifierChild1Dynamic, click: inputStudyIdentifierChild1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputStudyIdentifierChild1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputStudyIdentifierChild1Editable">
-                </div>
-            </div>
-
-<div data-bind="visible: inputSurnameChild2Dynamic, click: inputSurnameChild2Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSurnameChild2">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSurnameChild2Editable">
-                </div>
-            </div>
-			<div data-bind="visible: inputNameChild2Dynamic, click: inputNameChild2Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputNameChild2">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputNameChild2Editable">
-                </div>
-            </div>
-
-
-
-			<div data-bind="visible: inputSozVerNrChild2Dynamic, click: inputSozVerNrChild2Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrChild2">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSozVerNrChild2Editable">
-                </div>
-            </div>
-
-
-   			<div data-bind="visible: inputMatrikelnummerChild1Dynamic, click: inputMatrikelnummerChild1Scroll">
-  <label>Input one</label>
-    <br>
-    <div class="editable"  data-bind="visible: !isMultiMergeVisible(), text: inputMatrikelnummerChild1">
-    </div>
-    <div class="editable" data-bind="visible: isMultiMergeVisible, html: inputMatrikelnummerChild1Editable">
-    </div>
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputStudyIdentifierChild1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputStudyIdentifierChild1Editable">
+  </div>
 </div>
-
- <div data-bind="visible: inputSurnameMomDynamic, click: inputSurnameMomScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSurnameMom">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSurnameMomEditable">
-                </div>
-            </div>
-			<div data-bind="visible: inputNameMomDynamic, click: inputNameMomScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputNameMom">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputNameMomEditable">
-                </div>
-            </div>
-			<div data-bind="visible: inputSozVerNrMomDynamic, click: inputSozVerNrMomScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrMom">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSozVerNrMomEditable">
-                </div>
-            </div>
-
-
+<div data-bind="visible: inputSurnameChild2Dynamic, click: inputSurnameChild2Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSurnameChild2">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSurnameChild2Editable">
+  </div>
+</div>
+<div data-bind="visible: inputNameChild2Dynamic, click: inputNameChild2Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputNameChild2">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputNameChild2Editable">
+  </div>
+</div>
+<div data-bind="visible: inputSozVerNrChild2Dynamic, click: inputSozVerNrChild2Scroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrChild2">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSozVerNrChild2Editable">
+  </div>
+</div>
+<div data-bind="visible: inputMatrikelnummerChild1Dynamic, click: inputMatrikelnummerChild1Scroll">
+  <label>Input one
+  </label>
+  <br>
+  <div class="editable"  
+		data-bind="visible: !isMultiMergeVisible(), text: inputMatrikelnummerChild1">
+  </div>
+  <div class="editable" 
+		data-bind="visible: isMultiMergeVisible, html: inputMatrikelnummerChild1Editable">
+  </div>
+</div>
+<div data-bind="visible: inputSurnameMomDynamic, click: inputSurnameMomScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSurnameMom">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSurnameMomEditable">
+  </div>
+</div>
+<div data-bind="visible: inputNameMomDynamic, click: inputNameMomScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputNameMom">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputNameMomEditable">
+  </div>
+</div>
+<div data-bind="visible: inputSozVerNrMomDynamic, click: inputSozVerNrMomScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrMom">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputSozVerNrMomEditable">
+  </div>
+</div>
 <div data-bind="visible: inputAdressMomDynamic, click: inputAdressMomScroll">
-  <label>Input one</label>
-    <br>
-    <div class="editable"  data-bind="visible: !isMultiMergeVisible(), text: inputAdressMom">
-    </div>
-    <div class="editable"  data-bind="visible: isMultiMergeVisible, html: inputAdressMomEditable">
-    </div>
+  <label>Input one
+  </label>
+  <br>
+  <div class="editable"  
+		data-bind="visible: !isMultiMergeVisible(), text: inputAdressMom">
+  </div>
+  <div class="editable"  
+		data-bind="visible: isMultiMergeVisible, html: inputAdressMomEditable">
+  </div>
 </div>
 <div data-bind="visible: inputAdressMomNrDynamic, click: inputAdressMomScroll">
-  <label>Input one</label>
-    <br>
-    <div class="editable" data-bind="visible: !isMultiMergeVisible(), text: inputAdressMomNr">
-    </div>
-    <div class="editable" data-bind="visible: isMultiMergeVisible, html: inputAdressMomNrEditable">
-    </div>
+  <label>Input one
+  </label>
+  <br>
+  <div class="editable" 
+		data-bind="visible: !isMultiMergeVisible(), text: inputAdressMomNr">
+  </div>
+  <div class="editable" 
+		data-bind="visible: isMultiMergeVisible, html: inputAdressMomNrEditable">
+  </div>
 </div>
-
 <div data-bind="visible: inputPLZMomDynamic, click: inputPLZMomScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPLZMom">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPLZMomEditable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputPlaceMomDynamic, click: inputPlaceMomScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlaceMom">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceMomEditable">
-                </div>
-            </div>
-
-  <div data-bind="visible: inputJobMomDynamic, click: inputJobMomScroll">
-                <label>Input six</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputJobMom">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputJobMomEditable">
-                </div>
-            </div>
-
-  <div data-bind="visible: inputMomEarn1Dynamic, click: inputMomEarn1Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn1Editable">
-                </div>
-          
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPLZMom">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPLZMomEditable">
+  </div>
+</div>
+<div data-bind="visible: inputPlaceMomDynamic, click: inputPlaceMomScroll">
+  <label>Input one
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputPlaceMom">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputPlaceMomEditable">
+  </div>
+</div>
+<div data-bind="visible: inputJobMomDynamic, click: inputJobMomScroll">
+  <label>Input six
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputJobMom">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputJobMomEditable">
+  </div>
+</div>
 <div data-bind="visible: inputMomEarn1Dynamic, click: inputMomEarn1Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn1Editable">
-                </div>
-            </div>
-
-
-       <div data-bind="visible: inputMomEarn2Dynamic, click: inputMomEarn2Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn2">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn2Editable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputMomEarn3Dynamic, click: inputMomEarn3Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn3">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn3Editable">
-                </div>
-            </div>
-
-               <div data-bind="visible: inputMomEarn4Dynamic, click: inputMomEarn4Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn4">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn4Editable">
-                </div>
-            </div>
-
-                   <div data-bind="visible: inputMomEarn5Dynamic, click: inputMomEarn5Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn5">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn5Editable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputMomEarn5_1Dynamic, click: inputMomEarn5_1Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn5_1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn5_1Editable">
-                </div>
-            </div>
-
-                    <div data-bind="visible: inputMomEarn6Dynamic, click: inputMomEarn6Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn6">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn6Editable">
-                </div>
-            </div>
-
-             <div data-bind="visible: inputMomEarn7Dynamic, click: inputMomEarn7Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn7">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn7Editable">
-                </div>
-            </div>
-              <div data-bind="visible: inputMomEarn8Dynamic, click: inputMomEarn8Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn8">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomEarn8Editable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputMomTradeDynamic, click: inputMomTradeScroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputMomTrade">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputMomTradeEditable">
-                </div>
-            </div>
-
-<div data-bind="visible: inputSurnameDadDynamic, click: inputSurnameDadScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSurnameDad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSurnameDadEditable">
-                </div>
-            </div>
-			<div data-bind="visible: inputNameDadDynamic, click: inputNameDadScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputNameDad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputNameDadEditable">
-                </div>
-            </div>
-			<div data-bind="visible: inputSozVerNrDadDynamic, click: inputSozVerNrDadScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrDad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSozVerNrDadEditable">
-                </div>
-            </div>
-
-
-<div data-bind="visible: inputAdressDadDynamic, click: inputAdressDadScroll">
-  <label>Input one</label>
+  <label>Input nine
+  </label>
+  <div class="editable"                      
+		data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn1">
+  </div>
+  <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputMomEarn1Editable">
+  </div>
+  <div data-bind="visible: inputMomEarn1Dynamic, click: inputMomEarn1Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn1">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn1Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn2Dynamic, click: inputMomEarn2Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn2">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn2Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn3Dynamic, click: inputMomEarn3Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn3">
+    </div>
+    <div class="editable"                      
+		data-bind="visible: isMultiMergeVisible, html: inputMomEarn3Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn4Dynamic, click: inputMomEarn4Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn4">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn4Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn5Dynamic, click: inputMomEarn5Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn5">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn5Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn5_1Dynamic, click: inputMomEarn5_1Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn5_1">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn5_1Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn6Dynamic, click: inputMomEarn6Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn6">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn6Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn7Dynamic, click: inputMomEarn7Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn7">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn7Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomEarn8Dynamic, click: inputMomEarn8Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomEarn8">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomEarn8Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputMomTradeDynamic, click: inputMomTradeScroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputMomTrade">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputMomTradeEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputSurnameDadDynamic, click: inputSurnameDadScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputSurnameDad">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputSurnameDadEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputNameDadDynamic, click: inputNameDadScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputNameDad">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputNameDadEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputSozVerNrDadDynamic, click: inputSozVerNrDadScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputSozVerNrDad">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputSozVerNrDadEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputAdressDadDynamic, click: inputAdressDadScroll">
+    <label>Input one
+    </label>
     <br>
-    <div class="editable"  data-bind="visible: !isMultiMergeVisible(), text: inputAdressDad">
+    <div class="editable"  
+			data-bind="visible: !isMultiMergeVisible(), text: inputAdressDad">
     </div>
-    <div class="editable"  data-bind="visible: isMultiMergeVisible, html: inputAdressDadEditable">
+    <div class="editable"  
+			data-bind="visible: isMultiMergeVisible, html: inputAdressDadEditable">
     </div>
-</div>
-<div data-bind="visible: inputAdressDadNrDynamic, click: inputAdressDadScroll">
-  <label>Input one</label>
+  </div>
+  <div data-bind="visible: inputAdressDadNrDynamic, click: inputAdressDadScroll">
+    <label>Input one
+    </label>
     <br>
-    <div class="editable" data-bind="visible: !isMultiMergeVisible(), text: inputAdressDadNr">
+    <div class="editable" 
+			data-bind="visible: !isMultiMergeVisible(), text: inputAdressDadNr">
     </div>
-    <div class="editable" data-bind="visible: isMultiMergeVisible, html: inputAdressDadNrEditable">
+    <div class="editable" 
+			data-bind="visible: isMultiMergeVisible, html: inputAdressDadNrEditable">
     </div>
-</div>
-
-<div data-bind="visible: inputPLZDadDynamic, click: inputPLZDadScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPLZDad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPLZDadEditable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputPlaceDadDynamic, click: inputPlaceDadScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPlaceDad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPlaceDadEditable">
-                </div>
-            </div>
-
+  </div>
+  <div data-bind="visible: inputPLZDadDynamic, click: inputPLZDadScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPLZDad">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPLZDadEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputPlaceDadDynamic, click: inputPlaceDadScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPlaceDad">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPlaceDadEditable">
+    </div>
+  </div>
   <div data-bind="visible: inputJobDadDynamic, click: inputJobDadScroll">
-                <label>Input six</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputJobDad">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputJobDadEditable">
-                </div>
-            </div>
-
+    <label>Input six
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputJobDad">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputJobDadEditable">
+    </div>
+  </div>
   <div data-bind="visible: inputDadEarn1Dynamic, click: inputDadEarn1Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn1Editable">
-                </div>
-            </div>
-
-
-       <div data-bind="visible: inputDadEarn2Dynamic, click: inputDadEarn2Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn2">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn2Editable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputDadEarn3Dynamic, click: inputDadEarn3Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn3">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn3Editable">
-                </div>
-            </div>
-
-               <div data-bind="visible: inputDadEarn4Dynamic, click: inputDadEarn4Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn4">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn4Editable">
-                </div>
-            </div>
-
-                   <div data-bind="visible: inputDadEarn5Dynamic, click: inputDadEarn5Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn5">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn5Editable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputDadEarn5Dynamic, click: inputDadEarn5Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn5">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn5Editable">
-                </div>
-            </div>
-
-                    <div data-bind="visible: inputDadEarn6Dynamic, click: inputDadEarn6Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn6">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn6Editable">
-                </div>
-            </div>
-
-             <div data-bind="visible: inputDadEarn7Dynamic, click: inputDadEarn7Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn7">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn7Editable">
-                </div>
-            </div>
-              <div data-bind="visible: inputDadEarn8Dynamic, click: inputDadEarn8Scroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn8">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadEarn8Editable">
-                </div>
-            </div>
-
-
-            <div data-bind="visible: inputDadTradeDynamic, click: inputDadTradeScroll">
-                <label>Input nine</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDadTrade">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDadTradeEditable">
-                </div>
-            </div>
-
-
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn1">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn1Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn2Dynamic, click: inputDadEarn2Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn2">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn2Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn3Dynamic, click: inputDadEarn3Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn3">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn3Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn4Dynamic, click: inputDadEarn4Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn4">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn4Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn5aDynamic, click: inputDadEarn5aScroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn5a">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn5aEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn5Dynamic, click: inputDadEarn5Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn5">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn5Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn6Dynamic, click: inputDadEarn6Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn6">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn6Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn7Dynamic, click: inputDadEarn7Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn7">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn7Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadEarn8Dynamic, click: inputDadEarn8Scroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadEarn8">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadEarn8Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDadTradeDynamic, click: inputDadTradeScroll">
+    <label>Input nine
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDadTrade">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDadTradeEditable">
+    </div>
+  </div>
   <div data-bind="visible: inputSelfEarnPeriodDynamic, click: inputSelfEarnPeriodScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSelfEarnPeriod">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSelfEarnPeriodEditable">
-                </div>
-            </div>
-
-      <div data-bind="visible: inputSelfEarnPeriodUntilDynamic, click: inputSelfEarnPeriodUntilScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSelfEarnPeriodUntil">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSelfEarnPeriodUntilEditable">
-                </div>
-            </div>
-			
-			
-			  <div data-bind="visible: inputGetAidDynamic, click: inputGetAidScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputGetAid">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputGetAidEditable">
-                </div>
-            </div>
-
-      <div data-bind="visible: inputSelfLearnDynamic, click: inputSelfLearnScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputSelfLearn">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputSelfLearnEditable">
-                </div>
-            </div>
-
- <div data-bind="visible: inputPeriodSepDezDynamic, click: inputPeriodSepDezScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPeriodSepDez">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPeriodSepDezEditable">
-                </div>
-            </div>
-
-      <div data-bind="visible: inputPeriodJanFebDynamic, click: inputPeriodJanFebScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPeriodJanFeb">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPeriodJanFebEditable">
-                </div>
-            </div>
-
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputSelfEarnPeriod">
+    </div>
+    <div class="editable"                      	
+			data-bind="visible: isMultiMergeVisible, html: inputSelfEarnPeriodEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputSelfEarnPeriodUntilDynamic, click: inputSelfEarnPeriodUntilScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputSelfEarnPeriodUntil">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputSelfEarnPeriodUntilEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputGetAidDynamic, click: inputGetAidScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputGetAid">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputGetAidEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputSelfLearnDynamic, click: inputSelfLearnScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputSelfLearn">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputSelfLearnEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputPeriodSepDezDynamic, click: inputPeriodSepDezScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPeriodSepDez">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPeriodSepDezEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputPeriodJanFebruDynamic, click: inputPeriodJanFebruScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPeriodJanFebru">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPeriodJanFebruEditable">
+    </div>
+  </div>
   <div data-bind="visible: inputPeriodMarAugDynamic, click: inputPeriodMarAugScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPeriodMarAug">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPeriodMarAugEditable">
-                </div>
-            </div>
-
-      <div data-bind="visible: inputPeriodSepDez1Dynamic, click: inputPeriodSepDez1Scroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPeriodSepDez1">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPeriodSepDez1Editable">
-                </div>
-            </div>
-              <div data-bind="visible: inputPeriodJanFebDynamic, click: inputPeriodJanFebScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputPeriodJanFeb">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputPeriodJanFebEditable">
-                </div>
-            </div>
-
-      <div data-bind="visible: inputDateDynamic, click: inputDateScroll">
-                <label>Input one</label>
-
-                <div class="editable"
-                     data-bind="visible: !isMultiMergeVisible(), text: inputDate">
-                </div>
-                <div class="editable"
-                     data-bind="visible: isMultiMergeVisible, html: inputDateEditable">
-                </div>
-            </div>
-
-        </div>
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPeriodMarAug">
     </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPeriodMarAugEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputPeriodSepDez1Dynamic, click: inputPeriodSepDez1Scroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPeriodSepDez1">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPeriodSepDez1Editable">
+    </div>
+  </div>
+  <div data-bind="visible: inputPeriodJanFebDynamic, click: inputPeriodJanFebScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputPeriodJanFeb">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputPeriodJanFebEditable">
+    </div>
+  </div>
+  <div data-bind="visible: inputDateDynamic, click: inputDateScroll">
+    <label>Input one
+    </label>
+    <div class="editable"                      
+			data-bind="visible: !isMultiMergeVisible(), text: inputDate">
+    </div>
+    <div class="editable"                      
+			data-bind="visible: isMultiMergeVisible, html: inputDateEditable">
+    </div>
+  </div>
 </div>
-
-
-
+</div>
+</div>
 <div data-bind="visible: isObjectNotificationVisible">
-    <div class="tooltip in" data-bind="style: {top: toolTipTop, left: toolTipLeft, display: 'block'},
-            css: {right: toolTipArrow() == 'right', bottom: toolTipArrow() == 'bottom', top: toolTipArrow() == 'top'},
-            visible: isToolTipVisible,
-            click: scrollToFieldFromToolTip.bind($root)">
-        <div class="tooltip-arrow"></div>
-        <div class="tooltip-inner">
-            <em data-bind="text: barUser"></em>
-            <small>is typing in</small>
-            <strong data-bind="text: barField"></strong>
-        </div>
+  <div class="tooltip in" data-bind="style: {top: toolTipTop, left: toolTipLeft, display: 'block'},             css: {right: toolTipArrow() == 'right', bottom: toolTipArrow() == 'bottom', top: toolTipArrow() == 'top'},             visible: isToolTipVisible,             click: scrollToFieldFromToolTip.bind($root)">
+    <div class="tooltip-arrow">
     </div>
+    <div class="tooltip-inner">
+      <em data-bind="text: barUser">
+      </em>            <small>is typing in</small>
+      <strong data-bind="text: barField"></strong>
+    </div>
+  </div>
 </div>
-
 <ul class="span3" style="list-style-type: none" data-bind="visible: isHistoryByUserVisible, foreach: users">
-    <li data-bind="attr: {id: $data}" style="display: inline">
-        <a href="#" data-bind="click: $parent.showHistoryByUser.bind($parent, $data)">
-            <i class="icon-user"></i> <span data-bind="text: $data"></span>
-        </a>
-    </li>
+  <li data-bind="attr: {id: $data}" style="display: inline">
+    <a href="#" data-bind="click: $parent.showHistoryByUser.bind($parent, $data)">
+      <i class="icon-user"></i>
+      <span data-bind="text: $data">
+      </span>        </a>
+  </li>
 </ul>
-
 <div class="span3" data-bind="visible: isHistoryBoxVisible">
-    <div class="popover" style="display: block" data-bind="style: {top: historyTop, left: historyLeft},
-            css: {right: isHistoryByFieldVisible, bottom: isHistoryByUserVisible}">
-        <div class="arrow"></div>
-        <div class="popover-inner">
-            <h3 class="popover-title">History by
-                <strong data-bind="visible: isHistoryByFieldVisible, text: fieldForHistory"></strong>
-                <strong data-bind="visible: isHistoryByUserVisible, text: userForHistory"></strong>
-                <strong data-bind="visible: isHistoryByTimeVisible">Time</strong>
-            </h3>
-
-            <div class="popover-content " data-bind="foreach: history">
-                    <span data-bind="visible: !$parent.isHistoryByFieldVisible()">
-                        <strong data-bind="text: field"></strong>:
-                    </span>
-                <code data-bind="text: value"></code>
-                    <span data-bind="visible: !$parent.isHistoryByUserVisible()">
-                        <small>by</small> <em data-bind="text: user"></em>
-                    </span>
-                <br>
-            </div>
-        </div>
+  <div class="popover" style="display: block" data-bind="style: {top: historyTop, left: historyLeft},             css: {right: isHistoryByFieldVisible, bottom: isHistoryByUserVisible}">
+    <div class="arrow">
     </div>
-</div>
-
-<div class="span3 offset10" style="position: absolute; bottom: 0"
-     data-bind="visible: isBubbleNotificationVisible, foreach: notifications">
-    <div class="alert alert-info" data-bind="click: $root.scrollToFieldFromBubble.bind($root)">
-        <em data-bind="text: user"></em>
-        <small>is typing in</small>
-        <strong data-bind="text: field"></strong>
+    <div class="popover-inner">
+      <h3 class="popover-title">History by
+        <strong data-bind="visible: isHistoryByFieldVisible, text: fieldForHistory"></strong>
+        <strong data-bind="visible: isHistoryByUserVisible, text: userForHistory"></strong>
+        <strong data-bind="visible: isHistoryByTimeVisible">Time</strong>            </h3>
+      <div class="popover-content " data-bind="foreach: history">
+        <span data-bind="visible: !$parent.isHistoryByFieldVisible()">
+          <strong data-bind="text: field"></strong>:
+        </span>
+        <code data-bind="text: value">
+        </code>
+        <span data-bind="visible: !$parent.isHistoryByUserVisible()">                        <small>by</small>
+          <em data-bind="text: user">
+          </em>
+        </span>
+        <br>
+      </div>
     </div>
+  </div>
+</div>
+<div class="span3 offset10" style="position: absolute; bottom: 0"      data-bind="visible: isBubbleNotificationVisible, foreach: notifications">
+  <div class="alert alert-info" data-bind="click: $root.scrollToFieldFromBubble.bind($root)">
+    <em data-bind="text: user">
+    </em>        <small>is typing in</small>
+    <strong data-bind="text: field"></strong>
+  </div>
 </div>
 </div>
- 
-
-
-
+</div>
 <script src="/socket.io/socket.io.js"></script>
 <script data-main="js/main.js" src="js/lib/require.js"></script>
-
 </body>
 </html>
-
-
