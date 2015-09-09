@@ -2,11 +2,21 @@
 <html>
 <head>
     <title>reco - real time collaboration</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+	<script src="https://togetherjs.com/togetherjs-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+
+
+
+
+
+
 
 <div id="config" class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1000000000000000000000000000000000000">
 
@@ -87,8 +97,20 @@
 </div>
 
 
-<div class="span5 offset1">
+
+
+
+
+<div class="span5 offset1" >
+
+
+
+<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
 <h4> Case Study - Antrag auf Studienbeihilfe</h4>
+
+
+		
+
 <fieldset>
 <h3>Allgemeine Informationen &uuml;ber den/die Antragsteller/in</h3>
 
@@ -111,6 +133,9 @@
                 </a>
             </span>
 
+
+		
+			
 <label for="inputName">Vorname</label>
 
 <input id="inputName" type="text"
@@ -130,6 +155,7 @@
             </span>
 
 
+				
 <label for="inputSozVerNr">Sozialversicherungsnummer</label>
 
 <input id="inputSozVerNr" type="text"
@@ -148,8 +174,11 @@
                 </a>
             </span>
 			
+
 			
 <label>Geschlecht</label>
+
+
 			
 <label class="radio">
     <input id="inputGender" type="radio" name="optionsRadios" value="option1"
@@ -188,7 +217,9 @@
                     <i class="icon-time"></i>
                 </a>
             </span>
-			
+	
+	
+
 <label for="inputMatrikelnummer">Matrikel oder Personalnummer</label>
 
 <input id="inputMatrikelnummer" type="text"
@@ -227,6 +258,7 @@
             </span>
 
 
+			
 <label for="inputMail">E-Mail</label>
 
 <input id="inputMail" type="text"
@@ -280,7 +312,7 @@
                     <i class="icon-time"></i>
                 </a>
             </span>
-	
+
 	
 <label for="inputPLZ">Postleitzahl</label>
 <input id="inputPLZ" type="text"
@@ -317,6 +349,8 @@
             </span>
 	
 
+			
+	
 <h3>Angaben zum Konto</h3>
 <label for="inputIBAN">Ort</label>
 
@@ -354,6 +388,9 @@
             </span>
 		
 
+
+		
+		
 		
 <label> Ich bin Kontoinhaber</label>	
 <label class="radio">
@@ -2880,10 +2917,8 @@ document.getElementById("mom").style.display="inline";
             </span>
             <p>
             </p>
-<!--
-			
-			<fieldset>     
-            <div class="container">
+<fieldset>     
+            <div class="container" style="margin-left:0px">
               <section class="body-content row" id="sketchapp" style="margin-left: 0px; margin-right: 0px;">
                 
                 
@@ -2905,17 +2940,22 @@ document.getElementById("mom").style.display="inline";
             
             <script src="/js/lib/sketch.js">
             </script>
+ </fieldset>
             
-             
-            
-          </fieldset>
--->   
-<br>
+			<br>
 <button type="submit" class="btn btn-primary">Formular speichern</button>
 <button type="button" class="btn">Abbrechen</button>
 </fieldset>
-</div>
 
+</div>
+<fieldset>
+
+
+	
+
+
+
+</fieldset>
 <div class="navbar navbar-fixed-top" data-bind="visible: isDynamicTopVisible">
     <div class="navbar-inner">
         <div class="span5" style="margin-left: 80px; margin-top: 10px">
@@ -2950,6 +2990,17 @@ document.getElementById("mom").style.display="inline";
                      data-bind="visible: isMultiMergeVisible, html: inputSozVerNrEditable">
                 </div>
             </div>
+			
+			
+<div data-bind="visible: sketchDynamic, click: sketchScroll">
+  <label>Input one</label>
+    <br>
+    <div class="editable"  data-bind="visible: !isMultiMergeVisible(), text: sketch">
+    </div>
+    <div class="editable"  data-bind="visible: isMultiMergeVisible, html: sketchEditable">
+    </div>
+</div>			
+			
 			
 <div data-bind="visible: inputMatrikelnummerDynamic, click: inputMatrikelnummerScroll">
 	<label>Input one</label>
@@ -3893,7 +3944,15 @@ document.getElementById("mom").style.display="inline";
 </div>
 </div>
 </div>
+</div>
+</div>
+
+</div>
+
+
+<script  src="js/lib/sketch.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script data-main="js/main.js" src="js/lib/require.js"></script>
+
 </body>
 </html>

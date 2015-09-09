@@ -72,32 +72,51 @@ body {
 .popover.bottom .arrow {
     left: 30px;
 }
-
-#config .popover {
-    max-width: none;
+.popover-content {
+    max-height: 600px;
+    overflow: auto;
 }
 
-#config .popover .form-horizontal .control-group {
+.config .popover {
+	margin-left: -325px; 
+	min-width: 320px;
+}
+
+#config .form-horizontal .control-group {
 	margin-bottom: 5px;
 }
 
 #config .popover .form-horizontal .control-label {
-/*	width: 110px;*/
+	width: 110px;
 }
 
 #config .popover .form-horizontal .controls {
-/*	margin-left: 120px;*/
+	margin-left: 120px;
 }
 
 #config .popover-title {
 	font-weight: bold;
 }
+h1, h2, h3{
+		
+text-decoration: underline;
+	
+	
+}
 
-
-#mainView {
-    bottom: 0px; 
-    overflow: scroll; 
-    position: fixed; 
-    top: 39px; 
-    width: 100%;
+ .upper-button {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.bottom-button {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.black-pick:hover {
+	background-color: #000;
+	border-color: #000;
+}
+.black-pick {
+	background-color: #202020;
+	border-color: #202020;
 }
