@@ -1,3 +1,46 @@
+
+.togetherjs-cursor {
+  
+    display: none;
+}
+
+.togetherjs {
+  
+    display: none;
+}
+
+
+.togetherjs * {
+    box-sizing: content-box !important;
+    display: none;
+}
+#togetherjs-modal-background {
+    position: fixed;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10001;
+    visibility: hidden;
+}
+
+
+#togetherjs-dock {
+    
+    display: none;
+}
+
+/* Navigationsbar unsichtbar */  
+.navbar {
+    margin-bottom: 20px;
+    overflow: visible;
+	display:none;
+}
+
+
+
 body {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -80,6 +123,7 @@ body {
 .config .popover {
 	margin-left: -325px; 
 	min-width: 320px;
+
 }
 
 #config .form-horizontal .control-group {
@@ -119,4 +163,13 @@ text-decoration: underline;
 .black-pick {
 	background-color: #202020;
 	border-color: #202020;
+}
+
+
+#mainView {
+    bottom: 0px; 
+    overflow: scroll; 
+    position: fixed; 
+    top: 39px; 
+    width: 100%;
 }

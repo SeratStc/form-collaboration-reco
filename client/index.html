@@ -8,27 +8,35 @@
 	<script src="https://togetherjs.com/togetherjs-min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-
-
-
+	
+	</head>
+<body onload="myTogether()">
+<script>
+TogetherJSConfig_autoStart:true;
+TogetherJSConfig_dontShowClicks: true;
+TogetherJSConfig_findRoom = "office";
+TogetherJSConfig_suppressJoinConfirmation: true;
+</script>
+<script>
+function myTogether(){
+TogetherJS();
+}
+</script>
 
 
 
 
 <div id="config" class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1000000000000000000000000000000000000">
-
-    <div class="pull-right" style="margin-top: 10px; margin-right: 20px">
+<!-- <button class="btn btn-link" id="start-togetherjs" style=" position:absolute; right:30px">Start TogetherJS</button>
+-->    <div class="pull-right" style="margin-top: 10px; margin-right: 20px">
 
         <a href="#" data-bind="click: toggleShowConfig.bind($root)">
             <i class="icon-cog"></i>
         </a>
-        <div class="popover bottom" style="width: 420px; margin-left: -395px" data-bind="visible: isConfigVisible">
-            <div class="arrow" style="margin-left: 360px"></div>
+        <div class="popover bottom" style="width: 420px; margin-left: -355px" data-bind="visible: isConfigVisible">
+            <div class="arrow" style="margin-left: 320px"></div>
             <div class="popover-inner">
-                <h3 class="popover-title">Config</h3>
+                <h4 class="popover-title">Config</h4>
 
                 <div class="popover-content">
                   <form class="form-horizontal">
@@ -85,7 +93,8 @@
 
 <div id="mainView" class="row" data-bind="event: { scroll: scrollListener }, prop: { scrollTop: scrollTop }">
 <div id="statusbar" class="navbar navbar-fixed-top" data-bind="visible: isNotificationBarVisible">
-    <div class="navbar-inner">
+    
+	<div class="navbar-inner">
         <div class="container">
             <p class="navbar-text text-center" data-bind="visible: isBarInfoVisible, click: scrollToFieldFromBar">
                 <em data-bind="text: barUser"></em>
@@ -103,16 +112,10 @@
 
 <div class="span5 offset1" >
 
-
-
-<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
-<h4> Case Study - Antrag auf Studienbeihilfe</h4>
-
-
+<h4 style="text-decoration: underline"> Case Study - Antrag auf Studienbeihilfe</h4>
 		
-
 <fieldset>
-<h3>Allgemeine Informationen &uuml;ber den/die Antragsteller/in</h3>
+<h4>Allgemeine Informationen &uuml;ber den/die Antragsteller/in</h4>
 
 
 <label for="inputSurname">Nachname</label>
@@ -351,7 +354,7 @@
 
 			
 	
-<h3>Angaben zum Konto</h3>
+<h4>Angaben zum Konto</h4>
 <label for="inputIBAN">Ort</label>
 
 <input id="inputIBAN" type="text"  placeholder="AT"
@@ -486,7 +489,7 @@ document.getElementById("child2").style.display="inline";
             </span>			
 		
 		
-<h3> Weitere Angaben &uuml;ber den/die Antragsteller/in</h3>		
+<h4> Weitere Angaben &uuml;ber den/die Antragsteller/in</h4>		
 
 <label for="inputAppl">Antragsart</label>
 <select id="inputAppl" data-bind="value: inputAppl">
@@ -627,7 +630,7 @@ document.getElementById("child2").style.display="inline";
             </span>
 
 </p>
-<h3>Angaben &uuml;ber das Studium </h3>			
+<h4>Angaben &uuml;ber das Studium </h4>			
 			
 <label for="inputInstitut">Bildungseinrichtung</label>
 <input id="inputInstitut" type="text"
@@ -748,7 +751,7 @@ document.getElementById("child2").style.display="inline";
             </span>	
 
 
-<h3>Angaben &uuml;ber vorherige Studien / Unterbrechungen</h3>
+<h4>Angaben &uuml;ber vorherige Studien / Unterbrechungen</h4>
 
 
 <label > Ich habe mein Studium unterbrochen</label>
@@ -894,7 +897,7 @@ document.getElementById("child2").style.display="inline";
 
 </fieldset>
 
-<h3> Angaben zu weiteren Personen</h3>
+<h4> Angaben zu weiteren Personen</h4>
 		
 	
 <label > Ich habe eigene Kinder und bin zur Pflege und Erziehung gesetztlich verpflichtet</label>
@@ -1005,7 +1008,7 @@ document.getElementById("child2").style.display="inline";
 <fieldset id="child1" style="display:none">
 
 
-<h3> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h3>
+<h4> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h4>
 <label for="inputSurnameChild1">Nachname</label>
 <input id="inputSurnameChild1" type="text"
        data-bind="value: inputSurnameChild1, valueUpdate: 'afterkeydown', disable: inputSurnameChild1Disabled,
@@ -1212,7 +1215,7 @@ document.getElementById("child2").style.display="inline";
 </div>
 
 
-<h3> Wohnort w&auml;hrend des Studiums</h3>
+<h4> Wohnort w&auml;hrend des Studiums</h4>
 
 <label for="inputPLZChild">Postleitzahl</label>
 <input id="inputPLZChild" type="text"
@@ -1250,7 +1253,7 @@ document.getElementById("child2").style.display="inline";
             </span>
 			
 
-<h3> Wohnort der Eltern</h3>
+<h4> Wohnort der Eltern</h4>
 
 <label for="inputPlLZParents">Postleitzahl</label>
 <input id="inputPlLZParents" type="text"
@@ -1291,7 +1294,7 @@ document.getElementById("child2").style.display="inline";
 			
 			
 <fieldset  id="child2" style="display:none">
-<h3> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h3>
+<h4> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h4>
 
 <label for="inputSurnameChild2">Nachname</label>
 <input id="inputSurnameChild2" type="text"
@@ -1507,7 +1510,7 @@ document.getElementById("child2").style.display="inline";
                     <i class="icon-time"></i>
                 </a>
             </span>
- <h3> Wohnort w&auml;hrend des Studiums</h3>
+ <h4> Wohnort w&auml;hrend des Studiums</h4>
 
 <label for="inputPLZChild1">Postleitzahl</label>
 <input id="inputPLZChild1" type="text"
@@ -1547,7 +1550,7 @@ document.getElementById("child2").style.display="inline";
 
 
 
-<h3> Wohnort der Eltern</h3>
+<h4> Wohnort der Eltern</h4>
 
 <label for="inputPLZParents1">Postleitzahl</label>
 <input id="inputPLZParents1" type="text"
@@ -1589,7 +1592,7 @@ document.getElementById("child2").style.display="inline";
 			
 	
 
-<h3> Angaben zu Eltern der/des Antragstellerin/s </h3>
+<h4> Angaben zu Eltern der/des Antragstellerin/s </h4>
 
 <script>
 
@@ -1655,7 +1658,7 @@ document.getElementById("mom").style.display="inline";
 
 
 <fieldset id="mom">
-<h3>Angaben &uuml;ber die Mutter</h3>
+<h4>Angaben &uuml;ber die Mutter</h4>
 
 
 <label for="inputSurnameMom">Nachname</label>
@@ -1803,7 +1806,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-<h3>Beruf im Kalenderjahr 2014</h3>
+<h4>Beruf im Kalenderjahr 2014</h4>
 <label for="inputBerufMom">Beruf</label>
 <select id="inputBerufMom" multiple="multiple" data-bind="selectedOptions: inputBerufMom">
   
@@ -1857,7 +1860,7 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 			</span>
 
-<h3> Eink&uuml;nfte im Kalenderjahr 2014 </h3>
+<h4> Eink&uuml;nfte im Kalenderjahr 2014 </h4>
 
  <label class="checkbox">
     <input id="inputJobMomEarn" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn">
@@ -2169,7 +2172,7 @@ document.getElementById("mom").style.display="inline";
 
 
 <fieldset id="dad">
-<h3> Angaben &uuml;ber den Vater</h3>
+<h4> Angaben &uuml;ber den Vater</h4>
 <label for="inputSurnameDad">Nachname</label>
 
 <input id="inputSurnameDad" type="text"
@@ -2314,7 +2317,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-<h3>Beruf</h3>
+<h4>Beruf</h4>
 <label for="inputBerufDad">Input eleven</label>
 <select id="inputBerufDad" multiple="multiple" data-bind="selectedOptions: inputBerufDad">
 				<option>
@@ -2370,7 +2373,7 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 			</span>
 
-<h3> Eink&uuml;nfte im Kalenderjahr 2014 </h3>
+<h4> Eink&uuml;nfte im Kalenderjahr 2014 </h4>
  <label class="checkbox">
     <input id="inputJobDadEarn" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn">
     Unfallrente
@@ -2678,7 +2681,7 @@ document.getElementById("mom").style.display="inline";
 
 </fieldset>
 
-<h3>Einkommen der/des Antragstellerin/s</h3>
+<h4>Einkommen der/des Antragstellerin/s</h4>
 	<label>Ich werde die Einkommensgrenze von EUR 10.000,- (inkl. Waisenpension, etc) &uuml;berschreiten.</label>
 
 <label class="radio">
@@ -2777,7 +2780,7 @@ document.getElementById("mom").style.display="inline";
                 </a>
             </span>
 
-<h3>Einkommenserkl&auml;rung</h3>
+<h4>Einkommenserkl&auml;rung</h4>
 <label for="inputPeriodSepDez">September 2015 bis 31. Dezember 2015</label>
 
 <input id="inputPeriodSepDez" type="text"
@@ -2869,7 +2872,7 @@ document.getElementById("mom").style.display="inline";
             </span>
 
 
-<h3>Erkl&auml;ung zu Einkommensdaten und Informationen	</h3>
+<h4>Erkl&auml;ung zu Einkommensdaten und Informationen	</h4>
 
 <fieldset>
 <p>
@@ -2991,7 +2994,7 @@ document.getElementById("mom").style.display="inline";
                 </div>
             </div>
 			
-			
+<!--			
 <div data-bind="visible: sketchDynamic, click: sketchScroll">
   <label>Input one</label>
     <br>
@@ -3001,7 +3004,7 @@ document.getElementById("mom").style.display="inline";
     </div>
 </div>			
 			
-			
+-->			
 <div data-bind="visible: inputMatrikelnummerDynamic, click: inputMatrikelnummerScroll">
 	<label>Input one</label>
     <br>
@@ -3916,10 +3919,10 @@ document.getElementById("mom").style.display="inline";
     <div class="arrow">
     </div>
     <div class="popover-inner">
-      <h3 class="popover-title">History by
+      <h4 class="popover-title">History by
         <strong data-bind="visible: isHistoryByFieldVisible, text: fieldForHistory"></strong>
         <strong data-bind="visible: isHistoryByUserVisible, text: userForHistory"></strong>
-        <strong data-bind="visible: isHistoryByTimeVisible">Time</strong>            </h3>
+        <strong data-bind="visible: isHistoryByTimeVisible">Time</strong>            </h4>
       <div class="popover-content " data-bind="foreach: history">
         <span data-bind="visible: !$parent.isHistoryByFieldVisible()">
           <strong data-bind="text: field"></strong>:

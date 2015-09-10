@@ -68,8 +68,8 @@ define(function () {
        		
 		if(this.configView.navigation()== this.configView.navigationValues[0]) {
 		//	this.configView.navigation()=this.configView.navigationValues[0];
-			document.getElementById("mainView").scrollTo(0,data);
-			console.log('got scroll event: ', data);						
+		//	document.getElementById("mainView").scrollTo(0,data);
+		//	console.log('got scroll event: ', data);						
 			}
 		else{
 		//	this.configView.navigation()=this.configView.navigationValues[1];
