@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>reco - real time collaboration</title>
-	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 	<script src="https://togetherjs.com/togetherjs-min.js"></script>
@@ -10,27 +10,35 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
 	</head>
-<body onload="myTogether()" onpageshow="location.href='http://localhost:8080/?user=user6&css=user-two#&togetherjs=office'">
+
+<body  onpageshow="location.href='http://localhost:8080/?user=user6&css=user-two#&togetherjs=office'">
 
 <script>
-TogetherJSConfig_autoStart=true;
+TogetherJSConfig_cloneClicks= ".radio";
+
+ TogetherJSConfig_autoStart=true;
 TogetherJSConfig_dontShowClicks= true;
-TogetherJSConfig_findRoom = "office";
+//TogetherJSConfig_findRoom = "office";
 TogetherJSConfig_suppressJoinConfirmation= true;
-TogetherJSConfig_cloneClicks=true;
+
 </script>
 <script>
 function myTogether(){
 TogetherJS();
 }
+
+</script>
+
+<script>
+$(function () {
+  $("#start-togetherjs").click(TogetherJS);
+});
 </script>
 
 
-
-
 <div id="config" class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1000000000000000000000000000000000000" >
-<!-- <button class="btn btn-link" id="start-togetherjs" style=" position:absolute; right:30px">Start TogetherJS</button>
--->    <div class="pull-right" style="margin-top: 10px; margin-right: 20px">
+
+ <div class="pull-right" style="margin-top: 10px; margin-right: 20px">
 
         <a href="#" data-bind="click: toggleShowConfig.bind($root)">
             <i class="icon-cog"></i>
@@ -108,7 +116,7 @@ TogetherJS();
 </div>
 
 <div class="span5 offset1" >
-
+<button class="btn btn-link" id="start-togetherjs" style=" position:absolute; right:30px">Start TogetherJS</button>
 <h4 style="text-decoration: underline"> Case Study - Antrag auf Studienbeihilfe</h4>
 		
 <fieldset>
@@ -118,7 +126,7 @@ TogetherJS();
 <label for="inputSurname">Nachname</label>
 
 <input id="inputSurname" type="text"
-       data-bind="value: inputSurname, valueUpdate: 'afterkeydown', disable: inputSurnameDisabled,
+       data-bind="value: inputSurname,   disable: inputSurnameDisabled,
                   hasFocus: inputSurnameSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSurnameEditable" class="editable"
@@ -139,7 +147,7 @@ TogetherJS();
 <label for="inputName">Vorname</label>
 
 <input id="inputName" type="text"
-       data-bind="value: inputName, valueUpdate: 'afterkeydown', disable: inputNameDisabled,
+       data-bind="value: inputName,   disable: inputNameDisabled,
                   hasFocus: inputNameSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputNameEditable" class="editable"
@@ -159,7 +167,7 @@ TogetherJS();
 <label for="inputSozVerNr">Sozialversicherungsnummer</label>
 
 <input id="inputSozVerNr" type="text"
-       data-bind="value: inputSozVerNr, valueUpdate: 'afterkeydown', disable: inputSozVerNrDisabled,
+       data-bind="value: inputSozVerNr,   disable: inputSozVerNrDisabled,
                   hasFocus: inputSozVerNrSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSozVerNrEditable" class="editable"
@@ -200,7 +208,7 @@ TogetherJS();
 <label for="inputBirth">Geburtsdatum</label>
 
 <input id="inputBirth" type="text"
-       data-bind="value: inputBirth, valueUpdate: 'afterkeydown', disable: inputBirthDisabled,
+       data-bind="value: inputBirth,   disable: inputBirthDisabled,
                   hasFocus: inputBirthSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputBirthEditable" class="editable"
@@ -220,7 +228,7 @@ TogetherJS();
 <label for="inputMatrikelnummer">Matrikel oder Personalnummer</label>
 
 <input id="inputMatrikelnummer" type="text"
-       data-bind="value: inputMatrikelnummer, valueUpdate: 'afterkeydown', disable: inputMatrikelnummerDisabled,
+       data-bind="value: inputMatrikelnummer,   disable: inputMatrikelnummerDisabled,
                   hasFocus: inputMatrikelnummerSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputMatrikelnummerEditable" class="editable"
@@ -239,7 +247,7 @@ TogetherJS();
 <label for="inputTel">Telefonnummer</label>
 
 <input id="inputTel" type="text"
-       data-bind="value: inputTel, valueUpdate: 'afterkeydown', disable: inputTelDisabled,
+       data-bind="value: inputTel,   disable: inputTelDisabled,
                   hasFocus: inputTelSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputTelEditable" class="editable"
@@ -259,7 +267,7 @@ TogetherJS();
 <label for="inputMail">E-Mail</label>
 
 <input id="inputMail" type="text"
-       data-bind="value: inputMail, valueUpdate: 'afterkeydown', disable: inputMailDisabled,
+       data-bind="value: inputMail,   disable: inputMailDisabled,
                   hasFocus: inputMailSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputMailEditable" class="editable"
@@ -278,7 +286,7 @@ TogetherJS();
 <label for="inputAdress">Adresse</label>
 
 <input id="inputAdress" type="text"
-       data-bind="value: inputAdress, valueUpdate: 'afterkeydown', disable: inputAdressDisabled,
+       data-bind="value: inputAdress,   disable: inputAdressDisabled,
                   hasFocus: inputAdressSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputAdressEditable" class="editable"
@@ -295,7 +303,7 @@ TogetherJS();
 	
 <label for="inputAdressNr">Hausnummer</label>
 <input id="inputAdressNr" type="text"
-       data-bind="value: inputAdressNr, valueUpdate: 'afterkeydown', disable: inputAdressNrDisabled,
+       data-bind="value: inputAdressNr,   disable: inputAdressNrDisabled,
                   hasFocus: inputAdressNrSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputAdressNrEditable" class="editable"
@@ -313,7 +321,7 @@ TogetherJS();
 	
 <label for="inputPLZ">Postleitzahl</label>
 <input id="inputPLZ" type="text"
-       data-bind="value: inputPLZ, valueUpdate: 'afterkeydown', disable: inputPLZDisabled,
+       data-bind="value: inputPLZ,   disable: inputPLZDisabled,
                   hasFocus: inputPLZSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPLZEditable" class="editable"
@@ -330,7 +338,7 @@ TogetherJS();
 
 <label for="inputPlace">Ort</label>
 <input id="inputPlace" type="text"
-       data-bind="value: inputPlace, valueUpdate: 'afterkeydown', disable: inputPlaceDisabled,
+       data-bind="value: inputPlace,   disable: inputPlaceDisabled,
                   hasFocus: inputPlaceSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceEditable" class="editable"
@@ -352,7 +360,7 @@ TogetherJS();
 <label for="inputIBAN">IBAN</label>
 
 <input id="inputIBAN" type="text"  placeholder="AT"
-       data-bind="value: inputIBAN, valueUpdate: 'afterkeydown', disable: inputIBANDisabled,
+       data-bind="value: inputIBAN,   disable: inputIBANDisabled,
                   hasFocus: inputIBANSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputIBANEditable" class="editable"
@@ -369,7 +377,7 @@ TogetherJS();
 	
 <label for="inputBIC">BIC</label>
 <input id="inputBIC" type="text"
-       data-bind="value: inputBIC, valueUpdate: 'afterkeydown', disable: inputBICDisabled,
+       data-bind="value: inputBIC,   disable: inputBICDisabled,
                   hasFocus: inputBICSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputBICEditable" class="editable"
@@ -385,36 +393,29 @@ TogetherJS();
             </span>
 		
 
-
-		
-		
-		
-<label> Ich bin Kontoinhaber</label>
-
-
+<label> Ich bin Kontoinhaber </label>		
 <label class="radio">
-    <input id="inputTwoChecked" type="radio" name="optionsRadios" value="option1"
-           data-bind="checked: inputTwoChecked" onclick="hideKontoInhaber()">
-    Ja
+    <input id="inputKonto" type="radio" name="optionsRadios9" value="option1"
+           data-bind="checked: inputKonto" onchange="hideKontoInhaber()">
+   Ja
 </label>
 
 <label class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
-           data-bind="checked: inputTwoChecked" onclick="showKontoInhaber()">
-    Nein
+    <input type="radio" name="optionsRadios9" id="inputKonto2" value="option2"
+           data-bind="checked: inputKonto" onchange="showKontoInhaber()">
+  Nein
 </label>
 
-
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputTwoChecked')">
+			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputKonto')">
                     <i class="icon-time"></i>
                 </a>
-            </span>
-		
-<fieldset id="showKontoOwner" style="display:none">	
+            </span>			
+	
+<p id="showKontoOwner" style="display:none">	
 <label for="inputOwner">Kontoinhaber</label>
 <input id="inputOwner" type="text"
-       data-bind="value: inputOwner, valueUpdate: 'afterkeydown', disable: inputOwnerDisabled,
+       data-bind="value: inputOwner,   disable: inputOwnerDisabled,
                   hasFocus: inputOwnerSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputOwnerEditable" class="editable"
@@ -429,7 +430,7 @@ TogetherJS();
                 </a>
             </span>
 		
-</fieldset>	
+</p>	
 	
 <script>
 
@@ -527,7 +528,7 @@ document.getElementById("child2").style.display="inline";
 
 <label class="radio">
     <input type="radio" name="inputNationality1" id="inputNationality2" value="option2"
-           data-bind="checked: inputNationality" onclick="showNationality()">
+           data-bind="checked: inputNationality" onchange="showNationality()">
     Andere
 </label>
 
@@ -540,7 +541,7 @@ document.getElementById("child2").style.display="inline";
 
 <p id="showNationality1" style="display:none">
 <input id="inputNat" type="text"
-       data-bind="value: inputNat , valueUpdate: 'afterkeydown', disable: inputNatDisabled,
+       data-bind="value: inputNat ,   disable: inputNatDisabled,
                   hasFocus: inputNatSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputNatEditable" class="editable"
@@ -561,7 +562,7 @@ document.getElementById("child2").style.display="inline";
 <label>Ich habe den Zivil/Pr&auml;senzdienst bzw. das freiwillige soziale Jahr geleistet.</label>
 <label class="radio">
     <input id="inputArmy" type="radio" name="inputArmy1" value="option1"
-           data-bind="checked: inputArmy" onclick="showArmy()">
+           data-bind="checked: inputArmy" onchange="showArmy()">
     Ja
 </label>
 
@@ -573,7 +574,7 @@ document.getElementById("child2").style.display="inline";
 
 <p id="inputMilitary1" style="display:none">
 <input id="inputMilitary" type="text"
-       data-bind="value: inputMilitary, valueUpdate: 'afterkeydown', disable: inputMilitaryDisabled,
+       data-bind="value: inputMilitary,   disable: inputMilitaryDisabled,
                   hasFocus: inputMilitarySelected, visible: !isMultiMergeVisible()" >
 
 <div id="inputMilitaryEditable" class="editable"
@@ -591,13 +592,13 @@ document.getElementById("child2").style.display="inline";
 <label> Ich bin erheblich behindert (mindestens 50 %)</label>
 <label class="radio">
     <input id="inputDisability" type="radio" name="inputDisability1" value="option1"
-           data-bind="checked: inputDisability" onclick="showDisability()">
+           data-bind="checked: inputDisability" onchange="showDisability()">
     Ja
 </label>
 
 <label class="radio">
     <input type="radio" name="inputDisability1" id="inputDisability2" value="option2"
-           data-bind="checked: inputDisability" onclick="showNationality()">
+           data-bind="checked: inputDisability" onchange="showNationality()">
     Nein
 </label>
 
@@ -611,7 +612,7 @@ document.getElementById("child2").style.display="inline";
 <p id="disability" style="display:none">
 <label for="inputDis"> Art der Behinderung </label>
 <input id="inputDis" type="text"
-       data-bind="value: inputDis , valueUpdate: 'afterkeydown', disable: inputDisDisabled,
+       data-bind="value: inputDis ,   disable: inputDisDisabled,
                   hasFocus: inputDisSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputDisEditable" class="editable"
@@ -631,7 +632,7 @@ document.getElementById("child2").style.display="inline";
 			
 <label for="inputInstitut">Bildungseinrichtung</label>
 <input id="inputInstitut" type="text"
-       data-bind="value: inputInstitut, valueUpdate: 'afterkeydown', disable: inputInstitutDisabled,
+       data-bind="value: inputInstitut,   disable: inputInstitutDisabled,
                   hasFocus: inputInstitutSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputInstitutEditable" class="editable"
@@ -649,7 +650,7 @@ document.getElementById("child2").style.display="inline";
 <label for="inputInstitutPlace">Standort</label>
 
 <input id="inputInstitutPlace" type="text"
-       data-bind="value: inputInstitutPlace, valueUpdate: 'afterkeydown', disable: inputInstitutPlaceDisabled,
+       data-bind="value: inputInstitutPlace,   disable: inputInstitutPlaceDisabled,
                   hasFocus: inputInstitutPlaceSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputInstitutPlaceEditable" class="editable"
@@ -666,7 +667,7 @@ document.getElementById("child2").style.display="inline";
 			
 <label for="inputStudyIdentifier">Studienkennung</label>
 <input id="inputStudyIdentifier" type="text"
-       data-bind="value: inputStudyIdentifier, valueUpdate: 'afterkeydown', disable: inputStudyIdentifierDisabled,
+       data-bind="value: inputStudyIdentifier,   disable: inputStudyIdentifierDisabled,
                   hasFocus: inputStudyIdentifierSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputStudyIdentifierEditable" class="editable"
@@ -705,7 +706,7 @@ document.getElementById("child2").style.display="inline";
 <label for="inputStudyStartYear">Studienbeginn - Jahr</label>
 
 <input id="inputStudyStartYear" type="text"
-       data-bind="value: inputStudyStartYear, valueUpdate: 'afterkeydown', disable: inputStudyStartYearDisabled,
+       data-bind="value: inputStudyStartYear,   disable: inputStudyStartYearDisabled,
                   hasFocus: inputStudyStartYearSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputStudyStartYearEditable" class="editable"
@@ -775,7 +776,7 @@ document.getElementById("child2").style.display="inline";
 <label > Ich habe bereits ein Studium abgschlossen</label>
 <label class="radio">
     <input id="inputStudyFinished" type="radio" name="optionStudyFinished" value="option1"
-           data-bind="checked: inputStudyFinished" onclick="showFinishedStudy()">
+           data-bind="checked: inputStudyFinished" onchange="showFinishedStudy()">
     Ja
 </label>
 
@@ -793,7 +794,7 @@ document.getElementById("child2").style.display="inline";
 <fieldset id="finish" style="display:none">			
 <label for="inputFinishedStudy">Abgeschlossenes Studium</label>
 <input id="inputFinishedStudy" type="text"
-       data-bind="value: inputFinishedStudy, valueUpdate: 'afterkeydown', disable: inputFinishedStudyDisabled,
+       data-bind="value: inputFinishedStudy,   disable: inputFinishedStudyDisabled,
                   hasFocus: inputFinishedStudySelected, visible: !isMultiMergeVisible()">
 
 <div id="inputFinishedStudyEditable" class="editable"
@@ -810,7 +811,7 @@ document.getElementById("child2").style.display="inline";
 	
 <label for="inputWhichUni">An welcher Universit&auml;t</label>
 <input id="inputWhichUni" type="text"
-       data-bind="value: inputWhichUni, valueUpdate: 'afterkeydown', disable: inputWhichUniDisabled,
+       data-bind="value: inputWhichUni,   disable: inputWhichUniDisabled,
                   hasFocus: inputWhichUniSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputWhichUniEditable" class="editable"
@@ -851,7 +852,7 @@ document.getElementById("child2").style.display="inline";
 <label for="inputWhichUniAbroad">An welcher Universit&auml;t</label>
 
 <input id="inputWhichUniAbroad" type="text"
-       data-bind="value: inputWhichUniAbroad, valueUpdate: 'afterkeydown', disable: inputWhichUniAbroadDisabled,
+       data-bind="value: inputWhichUniAbroad,   disable: inputWhichUniAbroadDisabled,
                   hasFocus: inputWhichUniAbroadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputWhichUniAbroadEditable" class="editable"
@@ -882,7 +883,7 @@ document.getElementById("child2").style.display="inline";
             </span>			
 <label for="inputFinishedIn">abgeschlossen am</label>
 <input id="inputFinishedIn" type="text"
-       data-bind="value: inputFinishedIn, valueUpdate: 'afterkeydown', disable: inputFinishedInDisabled,
+       data-bind="value: inputFinishedIn,   disable: inputFinishedInDisabled,
                   hasFocus: inputFinishedInSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputFinishedInEditable" class="editable"
@@ -981,7 +982,7 @@ document.getElementById("child2").style.display="inline";
 <label for="inputSumChildren">Summe aller Kinder</label>
 
 <input id="inputSumChildren" type="number"
-       data-bind="value: inputSumChildren, valueUpdate: 'afterkeydown', disable: inputSumChildrenDisabled,
+       data-bind="value: inputSumChildren,   disable: inputSumChildrenDisabled,
                   hasFocus: inputSumChildrenSelected, visible: !isMultiMergeVisible()" onkeyup="countChild()">
 
 <div id="inputSumChildrenEditable" class="editable"
@@ -1008,7 +1009,7 @@ document.getElementById("child2").style.display="inline";
 <h4> Angaben zu Personen, f&uuml;r die Unterhalt geleistet wird </h4>
 <label for="inputSurnameChild1">Nachname</label>
 <input id="inputSurnameChild1" type="text"
-       data-bind="value: inputSurnameChild1, valueUpdate: 'afterkeydown', disable: inputSurnameChild1Disabled,
+       data-bind="value: inputSurnameChild1,   disable: inputSurnameChild1Disabled,
                   hasFocus: inputSurnameChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputSurnameChild1Editable" class="editable"
@@ -1025,7 +1026,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputNameChild1">Vorname</label>
 <input id="inputNameChild1" type="text"
-       data-bind="value: inputNameChild1, valueUpdate: 'afterkeydown', disable: inputNameChild1Disabled,
+       data-bind="value: inputNameChild1,   disable: inputNameChild1Disabled,
                   hasFocus: inputNameChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputNameChild1Editable" class="editable"
@@ -1043,7 +1044,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputSozVerNrChild1">Sozialversicherungsnummer</label>
 <input id="inputSozVerNrChild1" type="text"
-       data-bind="value: inputSozVerNrChild1, valueUpdate: 'afterkeydown', disable: inputSozVerNrChild1Disabled,
+       data-bind="value: inputSozVerNrChild1,   disable: inputSozVerNrChild1Disabled,
                   hasFocus: inputSozVerNrChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputSozVerNrChild1Editable" class="editable"
@@ -1082,7 +1083,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputBirthChild1">Geburtsdatum</label>
 <input id="inputBirthChild1" type="text"
-       data-bind="value: inputBirthChild1, valueUpdate: 'afterkeydown', disable: inputBirthChild1Disabled,
+       data-bind="value: inputBirthChild1,   disable: inputBirthChild1Disabled,
                   hasFocus: inputBirthChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputBirthChild1Editable" class="editable"
@@ -1150,7 +1151,7 @@ document.getElementById("child2").style.display="inline";
 			
 <label for="inputInstitutChild">Bildungseinrichtung</label>
 <input id="inputInstitutChild" type="text"
-       data-bind="value: inputInstitutChild, valueUpdate: 'afterkeydown', disable: inputInstitutChildDisabled,
+       data-bind="value: inputInstitutChild,   disable: inputInstitutChildDisabled,
                   hasFocus: inputInstitutChildSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputInstitutChildEditable" class="editable"
@@ -1167,7 +1168,7 @@ document.getElementById("child2").style.display="inline";
 			
 <label for="inputInstitutPlaceChild">Standort</label>
 <input id="inputInstitutPlaceChild" type="text"
-       data-bind="value: inputInstitutPlaceChild, valueUpdate: 'afterkeydown', disable: inputInstitutPlaceChildDisabled,
+       data-bind="value: inputInstitutPlaceChild,   disable: inputInstitutPlaceChildDisabled,
                   hasFocus: inputInstitutPlaceChildSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputInstitutPlaceChildEditable" class="editable"
@@ -1184,7 +1185,7 @@ document.getElementById("child2").style.display="inline";
 			
 <label for="inputStudyIdentifierChild">Studienkennung</label>
 <input id="inputStudyIdentifierChild" type="text"
-       data-bind="value: inputStudyIdentifierChild, valueUpdate: 'afterkeydown', disable: inputStudyIdentifierChildDisabled,
+       data-bind="value: inputStudyIdentifierChild,   disable: inputStudyIdentifierChildDisabled,
                   hasFocus: inputStudyIdentifierChildSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputStudyIdentifierChildEditable" class="editable"
@@ -1202,7 +1203,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputMatrikelnummerChild">Matrikel oder Personalnummer</label>
 <input id="inputMatrikelnummerChild" type="text"
-       data-bind="value: inputMatrikelnummerChild, valueUpdate: 'afterkeydown', disable: inputMatrikelnummerChildDisabled,
+       data-bind="value: inputMatrikelnummerChild,   disable: inputMatrikelnummerChildDisabled,
                   hasFocus: inputMatrikelnummerChildSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputMatrikelnummerChildEditable" class="editable"
@@ -1216,7 +1217,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPLZChild">Postleitzahl</label>
 <input id="inputPLZChild" type="text"
-       data-bind="value: inputPLZChild, valueUpdate: 'afterkeydown', disable: inputPLZChildDisabled,
+       data-bind="value: inputPLZChild,   disable: inputPLZChildDisabled,
                   hasFocus: inputPLZChildSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPLZChildEditable" class="editable"
@@ -1234,7 +1235,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPlaceChild">Ort</label>
 <input id="inputPlaceChild" type="text"
-       data-bind="value: inputPlaceChild, valueUpdate: 'afterkeydown', disable: inputPlaceChildDisabled,
+       data-bind="value: inputPlaceChild,   disable: inputPlaceChildDisabled,
                   hasFocus: inputPlaceChildSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceChildEditable" class="editable"
@@ -1254,7 +1255,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPlLZParents">Postleitzahl</label>
 <input id="inputPlLZParents" type="text"
-       data-bind="value: inputPlLZParents, valueUpdate: 'afterkeydown', disable: inputPlLZParentsDisabled,
+       data-bind="value: inputPlLZParents,   disable: inputPlLZParentsDisabled,
                   hasFocus: inputPlLZParentsSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlLZParentsEditable" class="editable"
@@ -1272,7 +1273,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPlaceParents">Ort</label>
 <input id="inputPlaceParents" type="text"
-       data-bind="value: inputPlaceParents, valueUpdate: 'afterkeydown', disable: inputPlaceParentsDisabled,
+       data-bind="value: inputPlaceParents,   disable: inputPlaceParentsDisabled,
                   hasFocus: inputPlaceParentsSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceParentsEditable" class="editable"
@@ -1295,7 +1296,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputSurnameChild2">Nachname</label>
 <input id="inputSurnameChild2" type="text"
-       data-bind="value: inputSurnameChild2, valueUpdate: 'afterkeydown', disable: inputSurnameChild2Disabled,
+       data-bind="value: inputSurnameChild2,   disable: inputSurnameChild2Disabled,
                   hasFocus: inputSurnameChild2Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputSurnameChild2Editable" class="editable"
@@ -1312,7 +1313,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputNameChild2">Vorname</label>
 <input id="inputNameChild2" type="text"
-       data-bind="value: inputNameChild2, valueUpdate: 'afterkeydown', disable: inputNameChild2Disabled,
+       data-bind="value: inputNameChild2,   disable: inputNameChild2Disabled,
                   hasFocus: inputNameChild2Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputNameChild2Editable" class="editable"
@@ -1330,7 +1331,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputSozVerNrChild2">Sozialversicherungsnummer</label>
 <input id="inputSozVerNrChild2" type="text"
-       data-bind="value: inputSozVerNrChild2, valueUpdate: 'afterkeydown', disable: inputSozVerNrChild2Disabled,
+       data-bind="value: inputSozVerNrChild2,   disable: inputSozVerNrChild2Disabled,
                   hasFocus: inputSozVerNrChild2Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputSozVerNrChild2Editable" class="editable"
@@ -1369,7 +1370,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputBirthChild2">Geburtsdatum</label>
 <input id="inputBirthChild2" type="text"
-       data-bind="value: inputBirthChild2, valueUpdate: 'afterkeydown', disable: inputBirthChild2Disabled,
+       data-bind="value: inputBirthChild2,   disable: inputBirthChild2Disabled,
                   hasFocus: inputBirthChild2Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputBirthChild2Editable" class="editable"
@@ -1440,7 +1441,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputInstitutChild1">Bildungseinrichtung</label>
 <input id="inputInstitutChild1" type="text"
-       data-bind="value: inputInstitutChild1, valueUpdate: 'afterkeydown', disable: inputInstitutChild1Disabled,
+       data-bind="value: inputInstitutChild1,   disable: inputInstitutChild1Disabled,
                   hasFocus: inputInstitutChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputInstitutChild1Editable" class="editable"
@@ -1459,7 +1460,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputInstitutPlaceChild1">Standort</label>
 <input id="inputInstitutPlaceChild1" type="text"
-       data-bind="value: inputInstitutPlaceChild1, valueUpdate: 'afterkeydown', disable: inputInstitutPlaceChild1Disabled,
+       data-bind="value: inputInstitutPlaceChild1,   disable: inputInstitutPlaceChild1Disabled,
                   hasFocus: inputInstitutPlaceChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputInstitutPlaceChild1Editable" class="editable"
@@ -1476,7 +1477,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputStudyIdentifierChild1">Studienkennung</label>
 <input id="inputStudyIdentifierChild1" type="text"
-       data-bind="value: inputStudyIdentifierChild1, valueUpdate: 'afterkeydown', disable: inputStudyIdentifierChild1Disabled,
+       data-bind="value: inputStudyIdentifierChild1,   disable: inputStudyIdentifierChild1Disabled,
                   hasFocus: inputStudyIdentifierChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputStudyIdentifierChild1Editable" class="editable"
@@ -1493,7 +1494,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputMatrikelnummerChild1">Matrikel oder Personalnummer</label>
 <input id="inputMatrikelnummerChild1" type="text"
-       data-bind="value: inputMatrikelnummerChild1, valueUpdate: 'afterkeydown', disable: inputMatrikelnummerChild1Disabled,
+       data-bind="value: inputMatrikelnummerChild1,   disable: inputMatrikelnummerChild1Disabled,
                   hasFocus: inputMatrikelnummerChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMatrikelnummerChild1Editable" class="editable"
@@ -1511,7 +1512,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPLZChild1">Postleitzahl</label>
 <input id="inputPLZChild1" type="text"
-       data-bind="value: inputPLZChild1, valueUpdate: 'afterkeydown', disable: inputPLZChild1Disabled,
+       data-bind="value: inputPLZChild1,   disable: inputPLZChild1Disabled,
                   hasFocus: inputPLZChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputPLZChild1Editable" class="editable"
@@ -1529,7 +1530,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPlaceChild1">Ort</label>
 <input id="inputPlaceChild1" type="text"
-       data-bind="value: inputPlaceChild1, valueUpdate: 'afterkeydown', disable: inputPlaceChild1Disabled,
+       data-bind="value: inputPlaceChild1,   disable: inputPlaceChild1Disabled,
                   hasFocus: inputPlaceChild1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceChild1Editable" class="editable"
@@ -1551,7 +1552,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPLZParents1">Postleitzahl</label>
 <input id="inputPLZParents1" type="text"
-       data-bind="value: inputPLZParents1, valueUpdate: 'afterkeydown', disable: inputPLZParents1Disabled,
+       data-bind="value: inputPLZParents1,   disable: inputPLZParents1Disabled,
                   hasFocus: inputPLZParents1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputPLZParents1Editable" class="editable"
@@ -1569,7 +1570,7 @@ document.getElementById("child2").style.display="inline";
 
 <label for="inputPlaceParents1">Ort</label>
 <input id="inputPlaceParents1" type="text"
-       data-bind="value: inputPlaceParents1, valueUpdate: 'afterkeydown', disable: inputPlaceParents1Disabled,
+       data-bind="value: inputPlaceParents1,   disable: inputPlaceParents1Disabled,
                   hasFocus: inputPlaceParents1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceParents1Editable" class="editable"
@@ -1660,7 +1661,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputSurnameMom">Nachname</label>
 <input id="inputSurnameMom" type="text"
-       data-bind="value: inputSurnameMom, valueUpdate: 'afterkeydown', disable: inputSurnameMomDisabled,
+       data-bind="value: inputSurnameMom,   disable: inputSurnameMomDisabled,
                   hasFocus: inputSurnameMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSurnameMomEditable" class="editable"
@@ -1677,7 +1678,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputNameMom">Vorname</label>
 <input id="inputNameMom" type="text"
-       data-bind="value: inputNameMom, valueUpdate: 'afterkeydown', disable: inputNameMomDisabled,
+       data-bind="value: inputNameMom,   disable: inputNameMomDisabled,
                   hasFocus: inputNameMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputNameMomEditable" class="editable"
@@ -1695,7 +1696,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputSozVerNrMom">Sozialversicherungsnummer</label>
 <input id="inputSozVerNrMom" type="text"
-       data-bind="value: inputSozVerNrMom, valueUpdate: 'afterkeydown', disable: inputSozVerNrMomDisabled,
+       data-bind="value: inputSozVerNrMom,   disable: inputSozVerNrMomDisabled,
                   hasFocus: inputSozVerNrMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSozVerNrMomEditable" class="editable"
@@ -1717,7 +1718,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputBirthMom">Geburtsdatum</label>
 <input id="inputBirthMom" type="text"
-       data-bind="value: inputBirthMom, valueUpdate: 'afterkeydown', disable: inputBirthMomDisabled,
+       data-bind="value: inputBirthMom,   disable: inputBirthMomDisabled,
                   hasFocus: inputBirthMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputBirthMomEditable" class="editable"
@@ -1735,7 +1736,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputAdressMom">Adresse</label>
 <input id="inputAdressMom" type="text"
-       data-bind="value: inputAdressMom, valueUpdate: 'afterkeydown', disable: inputAdressMomDisabled,
+       data-bind="value: inputAdressMom,   disable: inputAdressMomDisabled,
                   hasFocus: inputAdressMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputAdressMomEditable" class="editable"
@@ -1752,7 +1753,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputAdressMomNr">Hausnummer</label>
 <input id="inputAdressMomNr" type="text"
-       data-bind="value: inputAdressMomNr, valueUpdate: 'afterkeydown', disable: inputAdressMomNrDisabled,
+       data-bind="value: inputAdressMomNr,   disable: inputAdressMomNrDisabled,
                   hasFocus: inputAdressMomNrSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputAdressMomNrEditable" class="editable"
@@ -1770,7 +1771,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPLZMom">Postleitzahl</label>
 <input id="inputPLZMom" type="text"
-       data-bind="value: inputPLZMom, valueUpdate: 'afterkeydown', disable: inputPLZMomDisabled,
+       data-bind="value: inputPLZMom,   disable: inputPLZMomDisabled,
                   hasFocus: inputPLZMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPLZMomEditable" class="editable"
@@ -1787,7 +1788,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPlaceMom">Ort</label>
 <input id="inputPlaceMom" type="text"
-       data-bind="value: inputPlaceMom, valueUpdate: 'afterkeydown', disable: inputPlaceMomDisabled,
+       data-bind="value: inputPlaceMom,   disable: inputPlaceMomDisabled,
                   hasFocus: inputPlaceMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceMomEditable" class="editable"
@@ -1840,7 +1841,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputJobMom">Derzeitiger Beruf</label>
 <input id="inputJobMom" type="text"
-       data-bind="value: inputJobMom, valueUpdate: 'afterkeydown', disable: inputJobMomDisabled,
+       data-bind="value: inputJobMom,   disable: inputJobMomDisabled,
                    hasFocus: inputJobMomSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputJobMomEditable" class="editable"
@@ -1860,19 +1861,15 @@ document.getElementById("mom").style.display="inline";
 <h4> Eink&uuml;nfte im Kalenderjahr 2014 </h4>
 
  <label class="checkbox">
-    <input id="inputJobMomEarn" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn">
+    <input  type="checkbox" onchange="showEarnMom1()">
     Unfallrente
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
 
+<p id="inputMomEarn1P" style="display:none">
 <label for="inputMomEarn1">Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn1" type="text"
-       data-bind="value: inputMomEarn1, valueUpdate: 'afterkeydown', disable: inputMomEarn1Disabled,
+       data-bind="value: inputMomEarn1,   disable: inputMomEarn1Disabled,
                    hasFocus: inputMomEarn1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn1Editable" class="editable"
@@ -1889,20 +1886,15 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
-
+</p>
 <label class="checkbox">
-    <input id="inputJobMomEarn1" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn1">
+    <input type="checkbox" onchange="showEarnMom2()">
     &Uuml;bergangsgeld (von Pensionsversicherungsanstalt ausbezahlt)
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn1')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
-
+<p id="inputMomEarn2P" style="display:none">			
 <label for="inputMomEarn2"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn2" type="text"
-       data-bind="value: inputMomEarn2, valueUpdate: 'afterkeydown', disable: inputMomEarn2Disabled,
+       data-bind="value: inputMomEarn2,   disable: inputMomEarn2Disabled,
                    hasFocus: inputMomEarn2Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn2Editable" class="editable"
@@ -1920,22 +1912,18 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-
+</p>
 
  <label class="checkbox">
-    <input id="inputJobMomEarn2" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn2">
+    <input type="checkbox" onchange="showEarnMom3()">
     Wochengeld
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn2')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
+<p id="inputMomEarn3P" style="display:none">
 <label for="inputMomEarn3"> Jahresbetrag brutto EUR</label>
 
 <input id="inputMomEarn3" type="text"
-       data-bind="value: inputMomEarn3, valueUpdate: 'afterkeydown', disable: inputMomEarn3Disabled,
+       data-bind="value: inputMomEarn3,   disable: inputMomEarn3Disabled,
                    hasFocus: inputMomEarn3Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn3Editable" class="editable"
@@ -1952,21 +1940,20 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
+
+
 
 <label class="checkbox">
-    <input id="inputJobMomEarn31" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn31">
+    <input type="checkbox" onchange="showEarnMom4()">
     Kinderbetreuungsgeld
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn31')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
- <label for="inputMomEarn4">& Jahresbetrag brutto EUR</label>
+<p id="inputMomEarn4P" style="display:none">
+ <label for="inputMomEarn4">Jahresbetrag brutto EUR</label>
 
 <input id="inputMomEarn4" type="text"
-       data-bind="value: inputMomEarn4, valueUpdate: 'afterkeydown', disable: inputMomEarn4Disabled,
+       data-bind="value: inputMomEarn4,   disable: inputMomEarn4Disabled,
                    hasFocus: inputMomEarn4Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn4Editable" class="editable"
@@ -1984,20 +1971,16 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-
+</p>
  <label class="checkbox">
-    <input id="inputJobMomEarn3" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn3">
+    <input type="checkbox" onchange="showEarnMom5()">
     Sozialhilfe/Mindestsicherung
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn3')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
-
+			
+<p id="inputMomEarn5P" style="display:none">
 <label for="inputMomEarn5"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn5" type="text"
-       data-bind="value: inputMomEarn5, valueUpdate: 'afterkeydown', disable: inputMomEarn5Disabled,
+       data-bind="value: inputMomEarn5,   disable: inputMomEarn5Disabled,
                    hasFocus: inputMomEarn5Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn5Editable" class="editable"
@@ -2015,20 +1998,21 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
+</p>
+
+			
+			
+			
 <label class="checkbox">
-    <input id="inputJobMomEarn4" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn4">
+    <input type="checkbox" onchange="showEarnMom6()">
     Sonderunterst&uuml;tzung des &ouml;sterreichischen Bergbaues
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn4')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
-
-<label for="inputMomEarn5"> Jahresbetrag brutto EUR</label>
+			
+<p id="inputMomEarn5_1P" style="display:none">
+<label for="inputMomEarn5_1"> Jahresbetrag brutto EUR</label>
 
 <input id="inputMomEarn5_1" type="text"
-       data-bind="value: inputMomEarn5_1, valueUpdate: 'afterkeydown', disable: inputMomEarn5_1Disabled,
+       data-bind="value: inputMomEarn5_1,   disable: inputMomEarn5_1Disabled,
                    hasFocus: inputMomEarn5_1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn5_1Editable" class="editable"
@@ -2045,20 +2029,17 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
 
 <label class="checkbox">
-    <input id="inputJobMomEarn5" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn5">
+    <input  type="checkbox" onchange="showEarnMom7()"> 
     Freier Dienstvertrag, Werkvertrag
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn5')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
-
+			
+<p id="inputMomEarn6P" style="display:none">
 <label for="inputMomEarn6"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn6" type="text"
-       data-bind="value: inputMomEarn6, valueUpdate: 'afterkeydown', disable: inputMomEarn6Disabled,
+       data-bind="value: inputMomEarn6,   disable: inputMomEarn6Disabled,
                    hasFocus: inputMomEarn6Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn6Editable" class="editable"
@@ -2075,19 +2056,17 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+			
+</p>			
 <label class="checkbox">
-<input id="inputJobMomEarn6" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn6">
+<input  type="checkbox" onchange="showEarnMom8()"> 
     Dienstleistungsscheck
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn6')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
-
+			
+<p id="inputMomEarn7P" style="display:none">
 <label for="inputMomEarn7"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn7" type="text"
-       data-bind="value: inputMomEarn7, valueUpdate: 'afterkeydown', disable: inputMomEarn7Disabled,
+       data-bind="value: inputMomEarn7,   disable: inputMomEarn7Disabled,
                    hasFocus: inputMomEarn7Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn7Editable" class="editable"
@@ -2105,21 +2084,85 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-			
+</p>			
+
+
+<script>
+
+function showEarnMom1(){
+document.getElementById("inputMomEarn1P").style.display="inline";
+}
+function showEarnMom2(){
+document.getElementById("inputMomEarn2P").style.display="inline";
+}
+function showEarnMom3(){
+document.getElementById("inputMomEarn3P").style.display="inline";
+}
+function showEarnMom4(){
+document.getElementById("inputMomEarn4P").style.display="inline";
+}
+function showEarnMom5(){
+document.getElementById("inputMomEarn5P").style.display="inline";
+}
+function showEarnMom6(){
+document.getElementById("inputMomEarn5_1P").style.display="inline";
+}
+function showEarnMom7(){
+document.getElementById("inputMomEarn6P").style.display="inline";
+}
+function showEarnMom8(){
+document.getElementById("inputMomEarn7P").style.display="inline";
+}
+function showEarnMom9(){
+document.getElementById("inputMomEarn8P").style.display="inline";
+}
+function showEarnMom10(){
+document.getElementById("inputMomTradeP").style.display="inline";
+}
+function showEarnDad1(){
+document.getElementById("inputDadEarn1P").style.display="inline";
+}
+function showEarnDad2(){
+document.getElementById("inputDadEarn2P").style.display="inline";
+}
+function showEarnDad3(){
+document.getElementById("inputDadEarn3P").style.display="inline";
+}
+function showEarnDad4(){
+document.getElementById("inputDadEarn4P").style.display="inline";
+}
+function showEarnDad5(){
+document.getElementById("inputDadEarn5P").style.display="inline";
+}
+function showEarnDad6(){
+document.getElementById("inputDadEarn5_1P").style.display="inline";
+}
+function showEarnDad7(){
+document.getElementById("inputDadEarn6P").style.display="inline";
+}
+function showEarnDad8(){
+document.getElementById("inputDadEarn7P").style.display="inline";
+}
+function showEarnDad9(){
+document.getElementById("inputDadEarn8P").style.display="inline";
+}
+function showEarnDad10(){
+document.getElementById("inputDadTradeP").style.display="inline";
+}
+
+</script>
+
+
 			
 <label class="checkbox">
-    <input id="inputJobMomEarn7" type="checkbox" value="checkOne" data-bind="checked: inputJobMomEarn7">
+    <input type="checkbox" onchange="showEarnMom9()"> 
     Ausl&auml;ndisches Einkommen
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobMomEarn7')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
+<p id="inputMomEarn8P" style="display:none">
 <label for="inputMomEarn8"> Jahresbetrag brutto EUR</label>
 <input id="inputMomEarn8" type="text"
-       data-bind="value: inputMomEarn8, valueUpdate: 'afterkeydown', disable: inputMomEarn8Disabled,
+       data-bind="value: inputMomEarn8,   disable: inputMomEarn8Disabled,
                    hasFocus: inputMomEarn8Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomEarn8Editable" class="editable"
@@ -2136,21 +2179,20 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>			
 <p></p>
 <p></p>
+
+
  <label class="checkbox">
-    <input id="inputMomBorder" type="checkbox" value="checkOne" data-bind="checked: inputMomBorder">
+    <input type="checkbox" onchange="showEarnMom10()"> 
    Ich bin Grenzg&auml;ngerin/Grenzg&auml;nger im Sinne des Einkommensteuergesetzes.
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputMomBorder')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+		
 
-
+<p id="inputMomTradeP" style="display:none">
 <input id="inputMomTrade" type="text"
-       data-bind="value: inputMomTrade, valueUpdate: 'afterkeydown', disable: inputMomTradeDisabled,
+       data-bind="value: inputMomTrade,   disable: inputMomTradeDisabled,
                    hasFocus: inputMomTradeSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputMomTradeEditable" class="editable"
@@ -2167,6 +2209,8 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+			
+</p>			
 </fieldset>
 
 
@@ -2175,7 +2219,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputSurnameDad">Nachname</label>
 
 <input id="inputSurnameDad" type="text"
-       data-bind="value: inputSurnameDad, valueUpdate: 'afterkeydown', disable: inputSurnameDadDisabled,
+       data-bind="value: inputSurnameDad,   disable: inputSurnameDadDisabled,
                   hasFocus: inputSurnameDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSurnameDadEditable" class="editable"
@@ -2193,7 +2237,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputNameDad">Vorname</label>
 
 <input id="inputNameDad" type="text"
-       data-bind="value: inputNameDad, valueUpdate: 'afterkeydown', disable: inputNameDadDisabled,
+       data-bind="value: inputNameDad,   disable: inputNameDadDisabled,
                   hasFocus: inputNameDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputNameDadEditable" class="editable"
@@ -2212,7 +2256,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputSozVerNrDad">Sozialversicherungsnummer</label>
 
 <input id="inputSozVerNrDad" type="text"
-       data-bind="value: inputSozVerNrDad, valueUpdate: 'afterkeydown', disable: inputSozVerNrDadDisabled,
+       data-bind="value: inputSozVerNrDad,   disable: inputSozVerNrDadDisabled,
                   hasFocus: inputSozVerNrDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSozVerNrDadEditable" class="editable"
@@ -2230,7 +2274,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputBirthDad">Geburtsdatum</label>
 
 <input id="inputBirthDad" type="text"
-       data-bind="value: inputBirthDad, valueUpdate: 'afterkeydown', disable: inputBirthDadDisabled,
+       data-bind="value: inputBirthDad,   disable: inputBirthDadDisabled,
                   hasFocus: inputBirthDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputBirthDadEditable" class="editable"
@@ -2248,7 +2292,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputAdressDad">Adresse</label>
 <input id="inputAdressDad" type="text"
-       data-bind="value: inputAdressDad, valueUpdate: 'afterkeydown', disable: inputAdressDadDisabled,
+       data-bind="value: inputAdressDad,   disable: inputAdressDadDisabled,
                   hasFocus: inputAdressDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputAdressDadEditable" class="editable"
@@ -2265,7 +2309,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputAdressDadNr">Hausnummer</label>
 <input id="inputAdressDadNr" type="text"
-       data-bind="value: inputAdressDadNr, valueUpdate: 'afterkeydown', disable: inputAdressDadNrDisabled,
+       data-bind="value: inputAdressDadNr,   disable: inputAdressDadNrDisabled,
                   hasFocus: inputAdressDadNrSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputAdressDadNrEditable" class="editable"
@@ -2283,7 +2327,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPLZDad">Postleitzahl</label>
 <input id="inputPLZDad" type="text"
-       data-bind="value: inputPLZDad, valueUpdate: 'afterkeydown', disable: inputPLZDadDisabled,
+       data-bind="value: inputPLZDad,   disable: inputPLZDadDisabled,
                   hasFocus: inputPLZDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPLZDadEditable" class="editable"
@@ -2300,7 +2344,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPlaceDad">Ort</label>
 <input id="inputPlaceDad" type="text"
-       data-bind="value: inputPlaceDad, valueUpdate: 'afterkeydown', disable: inputPlaceDadDisabled,
+       data-bind="value: inputPlaceDad,   disable: inputPlaceDadDisabled,
                   hasFocus: inputPlaceDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPlaceDadEditable" class="editable"
@@ -2355,7 +2399,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputJobDad">Derzeitiger Beruf</label>
 <input id="inputJobDad" type="text"
-       data-bind="value: inputJobDad, valueUpdate: 'afterkeydown', disable: inputJobDadDisabled,
+       data-bind="value: inputJobDad,   disable: inputJobDadDisabled,
                    hasFocus: inputJobDadSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputJobDadEditable" class="editable"
@@ -2373,20 +2417,15 @@ document.getElementById("mom").style.display="inline";
 			</span>
 
 <h4> Eink&uuml;nfte im Kalenderjahr 2014 </h4>
- <label class="checkbox">
-    <input id="inputJobDadEarn" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn">
+  <label class="checkbox">
+    <input  type="checkbox" onchange="showEarnDad1()">
     Unfallrente
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
-
+<p id="inputDadEarn1P" style="display:none">
 <label for="inputDadEarn1">Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn1" type="text"
-       data-bind="value: inputDadEarn1, valueUpdate: 'afterkeydown', disable: inputDadEarn1Disabled,
+       data-bind="value: inputDadEarn1,   disable: inputDadEarn1Disabled,
                    hasFocus: inputDadEarn1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn1Editable" class="editable"
@@ -2404,20 +2443,16 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
-
+</p>
 <label class="checkbox">
-    <input id="inputJobDadEarn1" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn1">
+    <input type="checkbox" onchange="showEarnDad2()">
     &Uuml;bergangsgeld (von Pensionsversicherungsanstalt ausbezahlt)
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn1')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+<p id="inputDadEarn2P" style="display:none">
 
 <label for="inputDadEarn2"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn2" type="text"
-       data-bind="value: inputDadEarn2, valueUpdate: 'afterkeydown', disable: inputDadEarn2Disabled,
+       data-bind="value: inputDadEarn2,   disable: inputDadEarn2Disabled,
                    hasFocus: inputDadEarn2Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn2Editable" class="editable"
@@ -2435,21 +2470,19 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
+</p>
 
 
- <label class="checkbox">
-    <input id="inputJobDadEarn2" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn2">
+
+<label class="checkbox">
+    <input type="checkbox" onchange="showEarnDad3()">
     Wochengeld
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn2')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
+<p id="inputDadEarn3P" style="display:none">
 <label for="inputDadEarn3"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn3" type="text"
-       data-bind="value: inputDadEarn3, valueUpdate: 'afterkeydown', disable: inputDadEarn3Disabled,
+       data-bind="value: inputDadEarn3,   disable: inputDadEarn3Disabled,
                    hasFocus: inputDadEarn3Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn3Editable" class="editable"
@@ -2467,19 +2500,18 @@ document.getElementById("mom").style.display="inline";
 
             </span>
 
+</p>			
+			
 <label class="checkbox">
-    <input id="inputJobDadEarn3a" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn3a">
+    <input type="checkbox" onchange="showEarnDad4()">
     Kinderbetreuungsgeld
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn3a')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
 
-<label for="inputDadEarn4">& Jahresbetrag brutto EUR</label>
+<p id="inputDadEarn4P" style="display:none">
+
+<label for="inputDadEarn4">Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn4" type="text"
-       data-bind="value: inputDadEarn4, valueUpdate: 'afterkeydown', disable: inputDadEarn4Disabled,
+       data-bind="value: inputDadEarn4,   disable: inputDadEarn4Disabled,
                    hasFocus: inputDadEarn4Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn4Editable" class="editable"
@@ -2496,21 +2528,18 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
 
-
- <label class="checkbox">
-    <input id="inputJobDadEarn3" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn3">
+<label class="checkbox">
+    <input type="checkbox" onchange="showEarnDad5()">
     Sozialhilfe/Mindestsicherung
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn3')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+			
+<p id="inputDadEarn5P" style="display:none">
 
 <label for="inputDadEarn5a"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn5a" type="text"
-       data-bind="value: inputDadEarn5a, valueUpdate: 'afterkeydown', disable: inputDadEarn5aDisabled,
+       data-bind="value: inputDadEarn5a,   disable: inputDadEarn5aDisabled,
                    hasFocus: inputDadEarn5aSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn5aEditable" class="editable"
@@ -2527,20 +2556,19 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
+
 
 <label class="checkbox">
-    <input id="inputJobDadEarn4" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn4">
+    <input type="checkbox" onchange="showEarnDad6()">
     Sonderunterst&uuml;tzung des &ouml;sterreichischen Bergbaues
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn4')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+			
+<p id="inputDadEarn5_1P" style="display:none">
 
 <label for="inputDadEarn5"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn5" type="text"
-       data-bind="value: inputDadEarn5, valueUpdate: 'afterkeydown', disable: inputDadEarn5Disabled,
+       data-bind="value: inputDadEarn5,   disable: inputDadEarn5Disabled,
                    hasFocus: inputDadEarn5Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn5Editable" class="editable"
@@ -2557,20 +2585,19 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
+
 
 <label class="checkbox">
-    <input id="inputJobDadEarn5" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn5">
+    <input  type="checkbox" onchange="showEarnDad7()"> 
     Freier Dienstvertrag, Werkvertrag
 </label>
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn5')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+			
+<p id="inputDadEarn6P" style="display:none">
 
 <label for="inputDadEarn6"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn6" type="text"
-       data-bind="value: inputDadEarn6, valueUpdate: 'afterkeydown', disable: inputDadEarn6Disabled,
+       data-bind="value: inputDadEarn6,   disable: inputDadEarn6Disabled,
                    hasFocus: inputDadEarn6Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn6Editable" class="editable"
@@ -2587,19 +2614,18 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
+
 <label class="checkbox">
-    <input id="inputJobDadEarn6" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn6">
+<input  type="checkbox" onchange="showEarnDad8()"> 
     Dienstleistungsscheck
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn6')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+			
+<p id="inputDadEarn7P" style="display:none">
 
 <label for="inputDadEarn7"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn7" type="text"
-       data-bind="value: inputDadEarn7, valueUpdate: 'afterkeydown', disable: inputDadEarn7Disabled,
+       data-bind="value: inputDadEarn7,   disable: inputDadEarn7Disabled,
                    hasFocus: inputDadEarn7Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn7Editable" class="editable"
@@ -2616,20 +2642,19 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
+
 
 <label class="checkbox">
-    <input id="inputJobDadEarn7" type="checkbox" value="checkOne" data-bind="checked: inputJobDadEarn7">
+    <input type="checkbox" onchange="showEarnDad9()"> 
     Ausl&auml;ndisches Einkommen
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputJobDadEarn7')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+
+<p id="inputDadEarn8P" style="display:none">
 
 <label for="inputDadEarn8"> Jahresbetrag brutto EUR</label>
 <input id="inputDadEarn8" type="text"
-       data-bind="value: inputDadEarn8, valueUpdate: 'afterkeydown', disable: inputDadEarn8Disabled,
+       data-bind="value: inputDadEarn8,   disable: inputDadEarn8Disabled,
                    hasFocus: inputDadEarn8Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadEarn8Editable" class="editable"
@@ -2646,21 +2671,21 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
+</p>
 <p></p>
 <p></p>
- <label class="checkbox">
-    <input id="inputDadBorder" type="checkbox" value="checkOne" data-bind="checked: inputDadBorder">
+
+<label class="checkbox">
+    <input type="checkbox" onchange="showEarnDad10()"> 
    Ich bin Grenzg&auml;ngerin/Grenzg&auml;nger im Sinne des Einkommensteuergesetzes.
 </label>
-<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputDadBorder')">
-                    <i class="icon-time"></i>
-                </a>
-            </span>
+		
+
+<p id="inputDadTradeP" style="display:none">
 
 
 <input id="inputDadTrade" type="text"
-       data-bind="value: inputDadTrade, valueUpdate: 'afterkeydown', disable: inputDadTradeDisabled,
+       data-bind="value: inputDadTrade,   disable: inputDadTradeDisabled,
                    hasFocus: inputDadTradeSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputDadTradeEditable" class="editable"
@@ -2677,7 +2702,7 @@ document.getElementById("mom").style.display="inline";
             <span class="help-block" data-bind="visible: isMultiMergeVisible">
 
             </span>
-
+</p>
 </fieldset>
 
 <h4>Einkommen der/des Antragstellerin/s</h4>
@@ -2705,7 +2730,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputSelfEarnPeriod">Ich werde in der Zeit von</label>
 
 <input id="inputSelfEarnPeriod" type="text"
-       data-bind="value: inputSelfEarnPeriod, valueUpdate: 'afterkeydown', disable: inputSelfEarnPeriodDisabled,
+       data-bind="value: inputSelfEarnPeriod,   disable: inputSelfEarnPeriodDisabled,
                   hasFocus: inputSelfEarnPeriodSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSelfEarnPeriodEditable" class="editable"
@@ -2725,7 +2750,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputSelfEarnPeriodUntil">bis</label>
 
 <input id="inputSelfEarnPeriodUntil" type="text"
-       data-bind="value: inputSelfEarnPeriodUntil, valueUpdate: 'afterkeydown', disable: inputSelfEarnPeriodUntilDisabled,
+       data-bind="value: inputSelfEarnPeriodUntil,   disable: inputSelfEarnPeriodUntilDisabled,
                   hasFocus: inputSelfEarnPeriodUntilSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSelfEarnPeriodUntilEditable" class="editable"
@@ -2744,7 +2769,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputGetAid">eine ausl&auml;ndische staatliche Studienf&ouml;rderung (z.B. BAf&ouml;G) in der H&ouml;he von insgesamt(in EUR)</label>
 
 <input id="inputGetAid" type="text"
-       data-bind="value: inputGetAid, valueUpdate: 'afterkeydown', disable: inputGetAidDisabled,
+       data-bind="value: inputGetAid,   disable: inputGetAidDisabled,
                   hasFocus: inputGetAidSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputGetAidEditable" class="editable"
@@ -2764,7 +2789,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputSelfLearn">Weiterbildungs/Bildungszeitgeld in der H&ouml;he von insgesamt(in EUR)</label>
 
 <input id="inputSelfLearn" type="text"
-       data-bind="value: inputSelfLearn, valueUpdate: 'afterkeydown', disable: inputSelfLearnDisabled,
+       data-bind="value: inputSelfLearn,   disable: inputSelfLearnDisabled,
                   hasFocus: inputSelfLearnSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputSelfLearnEditable" class="editable"
@@ -2783,7 +2808,7 @@ document.getElementById("mom").style.display="inline";
 <label for="inputPeriodSepDez">September 2015 bis 31. Dezember 2015</label>
 
 <input id="inputPeriodSepDez" type="text"
-       data-bind="value: inputPeriodSepDez, valueUpdate: 'afterkeydown', disable: inputPeriodSepDezDisabled,
+       data-bind="value: inputPeriodSepDez,   disable: inputPeriodSepDezDisabled,
                   hasFocus: inputPeriodSepDezSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPeriodSepDezEditable" class="editable"
@@ -2802,7 +2827,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPeriodJanFebru">J&auml;nner 2016 bis 29. Februar 2016</label>
 <input id="inputPeriodJanFebru" type="text"
-       data-bind="value: inputPeriodJanFebru, valueUpdate: 'afterkeydown', disable: inputPeriodJanFebruDisabled,
+       data-bind="value: inputPeriodJanFebru,   disable: inputPeriodJanFebruDisabled,
                   hasFocus: inputPeriodJanFebruSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPeriodJanFebruEditable" class="editable"
@@ -2819,7 +2844,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPeriodMarAug">M&auml;rz 2016 bis 31. August 2016</label>
 <input id="inputPeriodMarAug" type="text"
-       data-bind="value: inputPeriodMarAug, valueUpdate: 'afterkeydown', disable: inputPeriodMarAugDisabled,
+       data-bind="value: inputPeriodMarAug,   disable: inputPeriodMarAugDisabled,
                   hasFocus: inputPeriodMarAugSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPeriodMarAugEditable" class="editable"
@@ -2837,7 +2862,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPeriodSepDez1">September 2016 bis 31. Dezember 2016</label>
 <input id="inputPeriodSepDez1" type="text"
-       data-bind="value: inputPeriodSepDez1, valueUpdate: 'afterkeydown', disable: inputPeriodSepDez1Disabled,
+       data-bind="value: inputPeriodSepDez1,   disable: inputPeriodSepDez1Disabled,
                   hasFocus: inputPeriodSepDez1Selected, visible: !isMultiMergeVisible()">
 
 <div id="inputPeriodSepDez1Editable" class="editable"
@@ -2855,7 +2880,7 @@ document.getElementById("mom").style.display="inline";
 
 <label for="inputPeriodJanFeb">J&auml;nner 2017 bis 28. Februar 2017</label>
 <input id="inputPeriodJanFeb" type="text"
-       data-bind="value: inputPeriodJanFeb, valueUpdate: 'afterkeydown', disable: inputPeriodJanFebDisabled,
+       data-bind="value: inputPeriodJanFeb,   disable: inputPeriodJanFebDisabled,
                   hasFocus: inputPeriodJanFebSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputPeriodJanFebEditable" class="editable"
@@ -2903,7 +2928,7 @@ document.getElementById("mom").style.display="inline";
             
 <label for="inputDate">Wien, am</label>
 <input id="inputDate" type="text"
-       data-bind="value: inputDate, valueUpdate: 'afterkeydown', disable: inputDateDisabled,
+       data-bind="value: inputDate,   disable: inputDateDisabled,
                   hasFocus: inputDateSelected, visible: !isMultiMergeVisible()">
 
 <div id="inputDateEditable" class="editable"
