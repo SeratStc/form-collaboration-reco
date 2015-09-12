@@ -65,7 +65,7 @@ define(function () {
     };
 
     ConnectionManager.prototype.handleScroll = function (data) {
-       		
+      /* 		
 		if(this.configView.navigation()== this.configView.navigationValues[0]) {
 		//	this.configView.navigation()=this.configView.navigationValues[0];
 		//	document.getElementById("mainView").scrollTo(0,data);
@@ -74,7 +74,7 @@ define(function () {
 		else{
 		//	this.configView.navigation()=this.configView.navigationValues[1];
 			return;
-		}
+		}*/
     };
 
     return ConnectionManager;
