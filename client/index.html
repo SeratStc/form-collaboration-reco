@@ -10,12 +10,14 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
 	</head>
-<body onload="myTogether()">
+<body onload="myTogether()" onpageshow="location.href='http://localhost:8080/?user=user6&css=user-two#&togetherjs=office'">
+
 <script>
-TogetherJSConfig_autoStart:true;
-TogetherJSConfig_dontShowClicks: true;
+TogetherJSConfig_autoStart=true;
+TogetherJSConfig_dontShowClicks= true;
 TogetherJSConfig_findRoom = "office";
-TogetherJSConfig_suppressJoinConfirmation: true;
+TogetherJSConfig_suppressJoinConfirmation= true;
+TogetherJSConfig_cloneClicks=true;
 </script>
 <script>
 function myTogether(){
@@ -26,7 +28,7 @@ TogetherJS();
 
 
 
-<div id="config" class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1000000000000000000000000000000000000">
+<div id="config" class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1000000000000000000000000000000000000" >
 <!-- <button class="btn btn-link" id="start-togetherjs" style=" position:absolute; right:30px">Start TogetherJS</button>
 -->    <div class="pull-right" style="margin-top: 10px; margin-right: 20px">
 
@@ -91,7 +93,7 @@ TogetherJS();
     <p class="navbar-text pull-right" data-bind="text: user, css: cssClass" style="margin-right: 15px; padding-left: 10px; padding-right: 10px"></p>
 </div>
 
-<div id="mainView" class="row" data-bind="event: { scroll: scrollListener }, prop: { scrollTop: scrollTop }">
+<div id="mainView" class="row" data-bind="event: { scroll: scrollListener }, prop: { scrollTop: scrollTop }" onload="location.href='www.google.at'">
 <div id="statusbar" class="navbar navbar-fixed-top" data-bind="visible: isNotificationBarVisible">
     
 	<div class="navbar-inner">
@@ -104,11 +106,6 @@ TogetherJS();
         </div>
     </div>
 </div>
-
-
-
-
-
 
 <div class="span5 offset1" >
 
@@ -176,33 +173,30 @@ TogetherJS();
                     <i class="icon-time"></i>
                 </a>
             </span>
-			
+		
 
 			
 <label>Geschlecht</label>
-
-
-			
 <label class="radio">
-    <input id="inputGender" type="radio" name="optionsRadios" value="option1"
-           data-bind="checked: inputGender">
+    <input id="inputOneChecked" type="radio" name="optionsRadios" value="option1"
+           data-bind="checked: inputOneChecked">
     Frau
 </label>
 
 <label class="radio">
-    <input type="radio" name="optionsRadios" id="inputGender2" value="option2"
-           data-bind="checked: inputGender">
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
+           data-bind="checked: inputOneChecked">
     Mann
 </label>
 
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputGender')">
+
+<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputOneChecked')">
                     <i class="icon-time"></i>
                 </a>
             </span>
-
-
-
+						
+			
 <label for="inputBirth">Geburtsdatum</label>
 
 <input id="inputBirth" type="text"
@@ -395,24 +389,27 @@ TogetherJS();
 		
 		
 		
-<label> Ich bin Kontoinhaber</label>	
+<label> Ich bin Kontoinhaber</label>
+
+
 <label class="radio">
-    <input id="inputKonto" type="radio" name="optionsKonto" value="option1"
-           data-bind="checked: inputKonto" onclick="showKontoInhaber()">
+    <input id="inputTwoChecked" type="radio" name="optionsRadios" value="option1"
+           data-bind="checked: inputTwoChecked" onclick="hideKontoInhaber()">
     Ja
 </label>
 
 <label class="radio">
-    <input type="radio" name="optionsKonto" id="inputKonto2" value="option2"
-           data-bind="checked: inputKonto" onclick="hideKontoInhaber()">
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
+           data-bind="checked: inputTwoChecked" onclick="showKontoInhaber()">
     Nein
 </label>
 
-			<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
-                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputKonto')">
+
+<span class="help-inline" data-bind="visible: isHistoryByFieldVisible">
+                <a href="#" data-bind="click: showHistoryByField.bind($data, 'inputTwoChecked')">
                     <i class="icon-time"></i>
                 </a>
-            </span>	
+            </span>
 		
 <fieldset id="showKontoOwner" style="display:none">	
 <label for="inputOwner">Kontoinhaber</label>
