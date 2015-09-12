@@ -67,12 +67,11 @@ define(function () {
     ConnectionManager.prototype.handleScroll = function (data) {
        		
 		if(this.configView.navigation()== this.configView.navigationValues[0]) {
-		//	this.configView.navigation()=this.configView.navigationValues[0];
-		//	document.getElementById("mainView").scrollTo(0,data);
-		//	console.log('got scroll event: ', data);						
+			//this.configView.navigation()=this.configView.navigationValues[0];
+			document.getElementById("mainView").scrollTo(0,data);						
 			}
 		else{
-		//	this.configView.navigation()=this.configView.navigationValues[1];
+			//this.configView.navigation()=this.configView.navigationValues[1];
 			return;
 		}
     };

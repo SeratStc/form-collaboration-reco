@@ -101,7 +101,7 @@ $(function () {
     <p class="navbar-text pull-right" data-bind="text: user, css: cssClass" style="margin-right: 15px; padding-left: 10px; padding-right: 10px"></p>
 </div>
 
-<div id="mainView" class="row" data-bind="event: { scroll: scrollListener }, prop: { scrollTop: scrollTop }" onload="location.href='www.google.at'">
+<div id="mainView" class="row" data-bind="event: { scroll: scrollListener }, prop: { scrollTop: scrollTop }">
 <div id="statusbar" class="navbar navbar-fixed-top" data-bind="visible: isNotificationBarVisible">
     
 	<div class="navbar-inner">
@@ -116,7 +116,6 @@ $(function () {
 </div>
 
 <div class="span5 offset1" >
-<button class="btn btn-link" id="start-togetherjs" style=" position:absolute; right:30px">Start TogetherJS</button>
 <h4 style="text-decoration: underline"> Case Study - Antrag auf Studienbeihilfe</h4>
 		
 <fieldset>
