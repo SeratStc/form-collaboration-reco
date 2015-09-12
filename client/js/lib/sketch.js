@@ -26,10 +26,19 @@ context.strokeStyle = '#000';
 
 // attach the mousedown, mouseout, mousemove, mouseup event listeners.
 canvas.addEventListener('mousedown', function (e) {
-  lastMouse = {
+   var scrollMain = document.getElementById("mainView").scrollTop;
+   if(scrollMain > 0){ 
+    lastMouse = {
+    x: e.pageX - this.offsetLeft + 20,
+    y: e.pageY - this.offsetTop + scrollMain - 40
+  };}
+  else{
+    lastMouse = {
     x: e.pageX - this.offsetLeft,
-    y: e.pageY - this.offsetTop
-  };
+    y: e.pageY - this.offsetTop 
+  }; 
+      
+  } 
   canvas.addEventListener('mousemove', move, false);
 }, false);
 
@@ -107,10 +116,21 @@ function draw(start, end, color, size, compositeOperation, save) {
 
 // Called whenever the mousemove event is fired, calls the draw function:
 function move(e) {
+  
+     var scrollMain1 = document.getElementById("mainView").scrollTop;
+   if(scrollMain1 > 0){ 
+    var mouse = {
+    x: e.pageX - this.offsetLeft + 20,
+    y: e.pageY - this.offsetTop + scrollMain1 - 40
+ 
+  };}
+  else{
   var mouse = {
     x: e.pageX - this.offsetLeft,
-    y: e.pageY - this.offsetTop
+    y: e.pageY - this.offsetTop 
   };
+      
+  }  
   // Translates the coordinates from the local canvas size to 1140x400:
   sendMouse = {
     x: (1140/canvas.width)*mouse.x,
