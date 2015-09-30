@@ -39,15 +39,17 @@ define(['lib/knockout', 'lib/lodash', 'constants/HistoryConstant', 'constants/Me
         this.navigation = ko.observable(navigationStrategy);
 		
         this.scrollTop = ko.observable();
-		console.log(this.scrollTop);
-        this.scrollListener = _.throttle(
-                    _.bind(function scrollListener(event) {	
-					
-                     connector.scroll(document.getElementById("mainView").scrollTop); 
-					 
-                    }, this)
-                , 500, { 'leading': false });
-        
+		
+	
+window.onscroll = _.debounce(function(){myFunction()},400); 
+
+function myFunction() {	
+
+
+console.log($(window).scrollTop());
+connector.scroll($(window).scrollTop()); 
+ }
+ 
         this.history = ko.observable();
         this.isHistoryByFieldVisible = ko.observable(historyStrategy === HistoryConstant.BY_OBJECT);
         this.isHistoryByUserVisible = ko.observable(historyStrategy === HistoryConstant.BY_USER);

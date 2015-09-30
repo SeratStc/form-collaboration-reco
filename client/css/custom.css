@@ -4,6 +4,7 @@
     display: none;
 }
 
+
 .togetherjs {
   
     display: none;
@@ -30,7 +31,7 @@
 #togetherjs-dock {
     
     display: none;
-}
+} 
 
 /* Navigationsbar unsichtbar */  
 .navbar {
@@ -44,6 +45,7 @@
 body {
     padding-top: 60px;
     padding-bottom: 40px;
+   overflow: scroll; 
 }
 
 .editable {
@@ -165,11 +167,11 @@ text-decoration: underline;
 	border-color: #202020;
 }
 
-
+/*
 #mainView {
     bottom: 0px; 
     overflow: scroll; 
     position: fixed; 
     top: 39px; 
     width: 100%;
-}
+}*/

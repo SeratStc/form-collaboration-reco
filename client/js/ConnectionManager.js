@@ -67,8 +67,11 @@ define(function () {
     ConnectionManager.prototype.handleScroll = function (data) {
        		
 		if(this.configView.navigation()== this.configView.navigationValues[0]) {
-			//this.configView.navigation()=this.configView.navigationValues[0];
-			document.getElementById("mainView").scrollTo(0,data);						
+		
+		//	window.scrollTo(0,data);						
+			$("html").animate({ scrollTop: data }, '800');		
+			console.log("Hier");
+			
 			}
 		else{
 			//this.configView.navigation()=this.configView.navigationValues[1];
